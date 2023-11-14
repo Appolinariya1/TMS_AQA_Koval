@@ -82,14 +82,7 @@
     Console.WriteLine("Имя: {0} Возраст: {2} Рост: {1}", name, height, age);
     */
     /*
-    //Решение нашей задачи
-    //Подготовка данных
-    bool isWhiteBreadFresh = true;
-    ushort whiteBreadPrice = 150;
-    ushort butterPrice = 230;
-    ushort milkPrice = 170;
-    float milkFatPercentage = 1.2F;
-    */
+   
 
     string tst = "djfjf";
     tst = null;
@@ -103,4 +96,12 @@
     int age = Convert.ToInt32(age_str);
     Console.WriteLine($"Ваш возраст: {age}");
    
+    //Решение нашей задачи
+    //Подготовка данных
+    bool isWhiteBreadFresh = true;
+    ushort whiteBreadPrice = 150;
+    ushort butterPrice = 230;
+    ushort milkPrice = 170;
+    float milkFatPercentage = 1.2F;
+    */
 }
