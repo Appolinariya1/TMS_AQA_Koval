@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
 {
     //This message is murrr
     /*
@@ -6,21 +7,21 @@
      */
     /*
     Console.WriteLine("Hello, World!");
-    
+
         Console.WriteLine("It's a nice day!");
 
 
         const int MINUTES_IN_HOUR = 60;
-        
-    
-    
+
+
+
     string name;
     name = "Martin";
     Console.WriteLine(name);
-    
+
     name = "Martin2";
     Console.WriteLine(name);
-    
+
     //ЛИТЕРАЛЫ
     //логические
     Console.WriteLine(true);
@@ -37,7 +38,7 @@
     Console.WriteLine('H');
     //null
     //Console.WriteLine(null);
-    
+
     Console.WriteLine("It's a \t nice day!"); //добавляет знак табуляции
     Console.WriteLine("It's a \n nice day!"); //перевод на новую строчку
     Console.WriteLine("It's a \\ nice day!"); //чтобы вывести слеш, нужно поставить два
@@ -50,7 +51,7 @@
     float a = 3.14F;
     float a1 = 3.14f;
 
-    decimal c = 1005.5M; 
+    decimal c = 1005.5M;
     decimal c1 = 1005.5m;
 
     //неявная типизация
@@ -88,13 +89,13 @@
     Console.WriteLine("Введите свое имечко:");
     string? name = Console.ReadLine();
     Console.WriteLine($"Ваше имечко: {name}");
-    
+
     Console.WriteLine("Введите свой возраст:");
     string? age_str = Console.ReadLine();
     int age = Convert.ToInt32(age_str);
     Console.WriteLine($"Ваш возраст: {age}");
-   
-    
+
+
     */
 }
 //7 LESSON
@@ -174,7 +175,7 @@ short sum = Convert.ToInt16(sumString);
 
 if (sum > 0)
 {
-    
+
 if (!isWhiteBreadFresh)
 {
     Console.WriteLine($"На батон денег не хватает");
@@ -203,7 +204,7 @@ if (sum >= icecreamPrice)
 {
     Console.WriteLine("Сумма не может быть меньше 0");
 }
-Console.WriteLine($"Остаток суммы: {sum}"); 
+Console.WriteLine($"Остаток суммы: {sum}");
 
 //дописать по видео, а то не работает штука с суммой меньше
 
@@ -239,4 +240,81 @@ Console.WriteLine(z);
 
 z = x < y ? x + y : x - y; //если первое true, то выполняет блок 2, если false, то блок 3
 Console.WriteLine(z);
+
+
+
+int x = 6;
+if (x == 1)
+{
+    Console.WriteLine("1");
+} else if (x == 2)
+{
+    Console.WriteLine("2");
+}
+else
+{
+    Console.WriteLine("не соответствует условиям");
+}
+
+switch (x)
+{
+    case 1:
+        Console.WriteLine("1");
+        break;
+    case 2:
+        Console.WriteLine("2");
+        break;
+    default: //если ни один из описанных кейсов не подошел
+        Console.WriteLine("не соответствует условиям");
+        break; //конец выполнения этого кейса
+}
+
+string name = "Tom";
+switch (name)
+{
+    case "Alex":
+        Console.WriteLine("Alex");
+        break;
+    default: //если ни один из описанных кейсов не подошел
+        Console.WriteLine("не соответствует условиям");
+        break; //конец выполнения этого кейса
+}
+
 */
+//для boolean switch практически не используется, т.к. два варианта всего и нет смысла делать эту конструкцию
+
+
+Console.WriteLine(DoOperation(6));
+
+int DoOperation(int x)
+{
+    switch (x)
+    {
+        case 1:
+            return 1;
+        case 2:
+            return 2;
+        default:
+            return 0; //для этого метода всегда должен быть return, поэтому дефолтное значение обязательно
+    }
+}
+
+int DoOperation1(int x)
+{
+    int result = x switch
+    {
+        1 => 1,
+        2 => 2,
+        _ => 0
+    };
+    
+
+    return result;
+}
+
+int DoOperation2(int x) => x switch
+{
+    1 => 1,
+    2 => 2,
+    _ => 0
+};
