@@ -82,8 +82,6 @@
     Console.WriteLine("Имя: {0} Возраст: {2} Рост: {1}", name, height, age);
     */
     /*
-   
-
     string tst = "djfjf";
     tst = null;
 
@@ -96,12 +94,149 @@
     int age = Convert.ToInt32(age_str);
     Console.WriteLine($"Ваш возраст: {age}");
    
-    //Решение нашей задачи
-    //Подготовка данных
-    bool isWhiteBreadFresh = true;
-    ushort whiteBreadPrice = 150;
-    ushort butterPrice = 230;
-    ushort milkPrice = 170;
-    float milkFatPercentage = 1.2F;
+    
     */
 }
+//7 LESSON
+/*
+double x = 10.0;
+double z = x % 4;
+Console.WriteLine($"Результат: {z}");
+
+int x1 = 5;
+int z1 = ++x1;
+Console.WriteLine($"{x1} - {z1}");
+
+int a = 8;
+int b = 6;
+int c = a += b -= 5;
+Console.WriteLine(c);
+*/
+
+//Преобразование базовых типов данных
+/*
+byte a = 4;
+int b = a + 70;
+Console.WriteLine(b);
+
+byte a = 4;
+byte b = a + 70;
+Console.WriteLine(b); //ошибка, потому что 70 считается int
+
+
+byte a = 4;
+byte result = (byte)(a + 70);
+Console.WriteLine(result);
+
+bool c;
+int a = 10;
+int b = 20;
+c = a == b;
+Console.WriteLine(c);
+
+bool x1 = (5 > 6) | (4 < 6); //логическое сложение  (ИЛИ)
+Console.WriteLine(x1);
+
+bool x2 = (5 > 6) & (4 < 6); //логическое умножение  (И)
+Console.WriteLine(x2);
+
+bool a = true;
+bool b = !a;
+Console.WriteLine(b); //логическое отрицание
+
+
+
+
+
+
+
+if (условие)
+{
+}
+else
+{
+}
+
+
+//Решение нашей задачи
+//Подготовка данных
+bool isWhiteBreadFresh = true;
+ushort whiteBreadPrice = 150;
+ushort butterPrice = 230;
+ushort milkPrice = 170;
+float milkFatPercentage = 1.2F;
+ushort icecreamPrice = 350;
+
+
+Console.Write("Введите начальную сумму: ");
+string? sumString = Console.ReadLine();
+short sum = Convert.ToInt16(sumString);
+
+if (sum > 0)
+{
+    
+if (!isWhiteBreadFresh)
+{
+    Console.WriteLine($"На батон денег не хватает");
+}
+
+else  if (sum >= whiteBreadPrice)
+{
+          sum = Convert.ToInt16(sum - whiteBreadPrice);
+          Console.WriteLine($"Купили свежий батон по цене {whiteBreadPrice}");
+}
+
+}
+
+sum = (short)(sum - butterPrice);
+
+if (milkFatPercentage == 1.2F)
+{
+    sum = Convert.ToInt16(sum - milkPrice);
+}
+
+if (sum >= icecreamPrice)
+{
+    sum = Convert.ToInt16(sum - icecreamPrice);
+}
+//else
+{
+    Console.WriteLine("Сумма не может быть меньше 0");
+}
+Console.WriteLine($"Остаток суммы: {sum}"); 
+
+//дописать по видео, а то не работает штука с суммой меньше
+
+
+bool a = true;
+bool b = false;
+string name1 = "Tom1";
+string name2 = "Tom2";
+
+
+if ( !(name1.Equals(name2) & b))
+{
+    Console.WriteLine("Верно");
+}
+else
+{
+    Console.WriteLine("Неверно");
+}
+
+
+int x = 10;
+int y = 20;
+int z;
+if (x < y)
+{
+    z = x + y;
+}
+else
+{
+    z = x - y;
+}
+Console.WriteLine(z);
+
+z = x < y ? x + y : x - y; //если первое true, то выполняет блок 2, если false, то блок 3
+Console.WriteLine(z);
+*/
