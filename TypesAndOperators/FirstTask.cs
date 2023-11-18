@@ -2,16 +2,16 @@ namespace TypesAndOperators;
 
 public static class FirstTask
 {
-    public static void Calculator()
+    public static void StartCalculator()
     {
         //Задание 1. Консольный калькулятор
 
         Console.Write("Введите первое число: ");
-        int a = GetNumberFromConsole();
+        int a = Helpers.GetNumberFromConsole();
         Console.Write("Введите допустимую операцию (+, -, *, /): ");
         string b = GetOperationSignFromConsole();
         Console.Write("Введите второе число: ");
-        int c = GetNumberFromConsole();
+        int c = Helpers.GetNumberFromConsole();
         int? result = null;
         switch (b)
         {
@@ -43,26 +43,7 @@ public static class FirstTask
             Console.WriteLine($"Результат: {result}");
         }
     }
-
-    private static int GetNumberFromConsole()
-    {
-        string? inputString = Console.ReadLine();
-        if (string.IsNullOrEmpty(inputString))
-        {
-            Console.WriteLine("Некорректный ввод. Пожалуйста, введите число.");
-            return GetNumberFromConsole();
-        }
-
-        int result;
-        if (!int.TryParse(inputString, out result))
-        {
-            Console.WriteLine("Некорректный ввод. Пожалуйста, введите число.");
-            return GetNumberFromConsole();
-        }
-
-        return result;
-    }
-
+    
     private static string GetOperationSignFromConsole()
     {
         string? inputString = Console.ReadLine();

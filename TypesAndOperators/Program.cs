@@ -57,12 +57,12 @@
     j = 20;
 
     var j1 = 20;
-    
+
     Console.WriteLine("Добро пожаловать в C#");
     Console.Write("Надеюсь, Вы ");
     Console.Write("постигнете нюансы в C#! \n");
     Console.WriteLine("И все будет супер гуд!");
-    
+
     int j;
     j = 20;
 
@@ -189,7 +189,7 @@ else
     Console.WriteLine("Сумма не может быть меньше 0");
 }
 */
-    //============конец задачи про магазин=============
+//============конец задачи про магазин=============
 
 /*
 bool a = true;
@@ -289,7 +289,7 @@ int DoOperation1(int x)
         2 => 2,
         _ => 0
     };
-    
+
 
     return result;
 }
@@ -301,3 +301,36 @@ int DoOperation2(int x) => x switch
     _ => 0
 };
 */
+//=========== Home work ============
+
+using TypesAndOperators;
+Console.Write(@"
+Выберите задание:
+1 - Калькулятор
+2 - Проверка попадания числа в интервалы
+3 - Перевод слов о погоде
+4 - Проверка четности числа
+Введите число 1 - 4
+");
+int.TryParse(Console.ReadLine(), out var task);
+switch (task)
+{
+    case 1:
+        FirstTask.StartCalculator();
+        break;
+    case 2:
+        SecondTask.CheckNumberInIntervals();
+        break;
+    case 3:
+        ThirdTask.TranslateWordsAboutWeather();
+        break;
+    case 4:
+        FourthTask.CheckNumberIsEven();
+        break;
+    default:
+        Console.WriteLine("Некорректный номер задания");
+        break;
+}
+
+
+

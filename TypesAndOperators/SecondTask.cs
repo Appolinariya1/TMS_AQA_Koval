@@ -7,7 +7,7 @@ public static class SecondTask
         //Задание 2. Проверка попадания числа в интервалы
 
         Console.Write("Введите число: ");
-        int a = GetNumberFromConsole();
+        int a = Helpers.GetNumberFromConsole();
 
         if (a > 50 || a < -50)
         {
@@ -40,24 +40,5 @@ public static class SecondTask
         }
 
         Console.WriteLine("Число не попадает ни в один из заданных интервалов");
-    }
-
-    private static int GetNumberFromConsole()
-    {
-        string? inputString = Console.ReadLine();
-        if (string.IsNullOrEmpty(inputString))
-        {
-            Console.WriteLine("Некорректный ввод. Пожалуйста, введите число.");
-            return GetNumberFromConsole();
-        }
-
-        int result;
-        if (!int.TryParse(inputString, out result))
-        {
-            Console.WriteLine("Некорректный ввод. Пожалуйста, введите число.");
-            return GetNumberFromConsole();
-        }
-
-        return result;
     }
 }
