@@ -1,19 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
-{
+//========6 LESSON==========
+/*
     //This message is murrr
-    /*
-     Meow
-     */
-    /*
+
     Console.WriteLine("Hello, World!");
 
         Console.WriteLine("It's a nice day!");
 
-
         const int MINUTES_IN_HOUR = 60;
-
-
 
     string name;
     name = "Martin";
@@ -63,14 +57,12 @@
     j = 20;
 
     var j1 = 20;
-    */
-    /*
+    
     Console.WriteLine("Добро пожаловать в C#");
     Console.Write("Надеюсь, Вы ");
     Console.Write("постигнете нюансы в C#! \n");
     Console.WriteLine("И все будет супер гуд!");
-    */
-    /*
+    
     int j;
     j = 20;
 
@@ -81,8 +73,7 @@
     double height = 1.7;
     Console.WriteLine($"Имя: {name} Возраст: {age} Рост: {height}");
     Console.WriteLine("Имя: {0} Возраст: {2} Рост: {1}", name, height, age);
-    */
-    /*
+
     string tst = "djfjf";
     tst = null;
 
@@ -94,11 +85,8 @@
     string? age_str = Console.ReadLine();
     int age = Convert.ToInt32(age_str);
     Console.WriteLine($"Ваш возраст: {age}");
-
-
-    */
-}
-//7 LESSON
+*/
+//=============7 LESSON==================
 /*
 double x = 10.0;
 double z = x % 4;
@@ -112,10 +100,9 @@ int a = 8;
 int b = 6;
 int c = a += b -= 5;
 Console.WriteLine(c);
-*/
 
 //Преобразование базовых типов данных
-/*
+
 byte a = 4;
 int b = a + 70;
 Console.WriteLine(b);
@@ -145,20 +132,15 @@ bool a = true;
 bool b = !a;
 Console.WriteLine(b); //логическое отрицание
 
-
-
-
-
-
-
 if (условие)
 {
 }
 else
 {
 }
+*/
 
-
+/*
 //Решение нашей задачи
 //Подготовка данных
 bool isWhiteBreadFresh = true;
@@ -168,52 +150,52 @@ ushort milkPrice = 170;
 float milkFatPercentage = 1.2F;
 ushort icecreamPrice = 350;
 
-
 Console.Write("Введите начальную сумму: ");
 string? sumString = Console.ReadLine();
 short sum = Convert.ToInt16(sumString);
 
 if (sum > 0)
 {
+    if (!isWhiteBreadFresh)
+    {
+        Console.WriteLine("Батон не свежий");
+    }
+    else if (sum >= whiteBreadPrice)
+    {
+        sum = Convert.ToInt16(sum - whiteBreadPrice);
+        Console.WriteLine($"Купили свежий батон по цене {whiteBreadPrice}");
+    }
+    else
+    {
+        Console.WriteLine("На батон денег не хватает");
+    }
 
-if (!isWhiteBreadFresh)
-{
-    Console.WriteLine($"На батон денег не хватает");
+    sum = (short)(sum - butterPrice);
+
+    if (milkFatPercentage == 1.2F)
+    {
+        sum = Convert.ToInt16(sum - milkPrice);
+    }
+
+    if (sum >= icecreamPrice)
+    {
+        sum = Convert.ToInt16(sum - icecreamPrice);
+    }
+
+    Console.WriteLine($"Остаток суммы: {sum}");
 }
-
-else  if (sum >= whiteBreadPrice)
-{
-          sum = Convert.ToInt16(sum - whiteBreadPrice);
-          Console.WriteLine($"Купили свежий батон по цене {whiteBreadPrice}");
-}
-
-}
-
-sum = (short)(sum - butterPrice);
-
-if (milkFatPercentage == 1.2F)
-{
-    sum = Convert.ToInt16(sum - milkPrice);
-}
-
-if (sum >= icecreamPrice)
-{
-    sum = Convert.ToInt16(sum - icecreamPrice);
-}
-//else
+else
 {
     Console.WriteLine("Сумма не может быть меньше 0");
 }
-Console.WriteLine($"Остаток суммы: {sum}");
+*/
+    //============конец задачи про магазин=============
 
-//дописать по видео, а то не работает штука с суммой меньше
-
-
+/*
 bool a = true;
 bool b = false;
 string name1 = "Tom1";
 string name2 = "Tom2";
-
 
 if ( !(name1.Equals(name2) & b))
 {
