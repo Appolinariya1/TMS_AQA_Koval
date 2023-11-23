@@ -13,6 +13,7 @@ public static class FirstTask
         Console.Write("Введите второе число: ");
         int c = Helpers.GetNumberFromConsole();
         int? result = null;
+        
         switch (b)
         {
             case "+":

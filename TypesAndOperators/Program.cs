@@ -313,6 +313,7 @@ Console.Write(@"
 Введите число 1 - 4
 ");
 var task = Helpers.GetNumberFromConsole();
+
 switch (task)
 {
     case 1:
