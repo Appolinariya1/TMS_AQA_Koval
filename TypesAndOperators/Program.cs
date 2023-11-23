@@ -312,7 +312,7 @@ Console.Write(@"
 4 - Проверка четности числа
 Введите число 1 - 4
 ");
-int.TryParse(Console.ReadLine(), out var task);
+var task = Helpers.GetNumberFromConsole();
 switch (task)
 {
     case 1:
