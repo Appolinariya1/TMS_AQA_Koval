@@ -7,44 +7,50 @@ public static class ThirdTask
         Console.Write("Введите желаемый размер массива: ");
         int arraySize = Helpers.GetNumberFromConsole();
         int[] numbers = new int [arraySize];
-        for (int i = 0; i <= numbers.GetUpperBound(0); i++)
+
+        for (int i = 0; i < numbers.Length; i++)
         {
             numbers[i] = new Random().Next(100);
         }
+
         if (arraySize == 0)
         {
-            Console.WriteLine("В вашем массиве нет места для чисел, я не могу узнать минимальное, среднее и максимальное значения :(");
+            Console.WriteLine(
+                "В вашем массиве нет места для чисел, я не могу узнать минимальное, среднее и максимальное значения :(");
             return;
         }
+
         Console.WriteLine($"Создан массив: [{string.Join(", ", numbers)}]");
+
         int minNumber = numbers[0];
-        for (int j = 1; j < numbers.Length; j++)
+        for (int i = 1; i < numbers.Length; i++)
         {
-            if (minNumber > numbers[j])
+            if (minNumber > numbers[i])
             {
-                minNumber = numbers[j];
+                minNumber = numbers[i];
             }
         }
-        {
-            Console.WriteLine($"Минимальное значение из чисел массива = {minNumber} ");
-        }
+
+        Console.WriteLine($"Минимальное значение из чисел массива = {minNumber} ");
+
         int sum = 0;
-        for (int i = 0; i < numbers.Length; i++ )
+        for (int i = 0; i < numbers.Length; i++)
         {
             sum += numbers[i];
         }
+
         int aveNumber = sum / (numbers.Length);
         Console.WriteLine($"Среднее значение из чисел массива = {aveNumber}");
+
         int maxNumber = numbers[0];
-        for (int j = 1; j < numbers.Length; j++)
+        for (int i = 1; i < numbers.Length; i++)
         {
-            if (maxNumber < numbers[j])
+            if (maxNumber < numbers[i])
             {
-                maxNumber = numbers[j];
+                maxNumber = numbers[i];
             }
         }
-        {
-            Console.WriteLine($"Максимальное значение из чисел массива = {maxNumber} ");
-        }
+
+        Console.WriteLine($"Максимальное значение из чисел массива = {maxNumber} ");
     }
 }
