@@ -1,3 +1,8 @@
+/* Задание 1
+Создайте массив целых чисел.
+Напишете программу, которая выводит сообщение о том, входит ли заданное число в массив или нет.
+Пусть число для поиска задается с консоли. */
+
 namespace TypesAndOperators;
 
 public static class FirstTask
@@ -15,6 +20,5 @@ public static class FirstTask
         {
             Console.WriteLine($"Число {inputNumber} не входит в массив");
         }
-        
     }
 }

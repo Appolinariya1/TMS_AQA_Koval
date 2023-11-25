@@ -95,27 +95,25 @@ do //цикл выполнится минимум один раз (в отлич
 while (flag);
 
 int u1 = 6;
-do 
+do
 {
-    
+
     Console.WriteLine($"{u1}");
     u1--;
 }
 while (u1 >= 0);
-*/
+
 
 //-------------Двумерный массив------------
 int[,] array = new int[4, 5];
-Console.WriteLine("Length: " + array.Length);                       // количество всех элементов
-Console.WriteLine("Rank: " + array.Rank);                           // ранг массива
-Console.WriteLine("GetLength(0): " + array.GetLength(0));           // количество строк
-Console.WriteLine("GetUpperBound(0): " + array.GetUpperBound(0));   // Верхний индекс строк
-Console.WriteLine("GetLength(1): " + array.GetLength(1));           // количество столбцов
-Console.WriteLine("GetUpperBound(1): " + array.GetUpperBound(1));   // Верхний индекс столбцов
-Console.WriteLine("GetLowerBound(0): " + array.GetLowerBound(0));   // Нижний индекс строк
-Console.WriteLine("GetLowerBound(1): " + array.GetLowerBound(1));   // Нижний индекс столбцов
-
-
+Console.WriteLine("Length: " + array.Length); // количество всех элементов
+Console.WriteLine("Rank: " + array.Rank); // ранг массива
+Console.WriteLine("GetLength(0): " + array.GetLength(0)); // количество строк
+Console.WriteLine("GetUpperBound(0): " + array.GetUpperBound(0)); // Верхний индекс строк
+Console.WriteLine("GetLength(1): " + array.GetLength(1)); // количество столбцов
+Console.WriteLine("GetUpperBound(1): " + array.GetUpperBound(1)); // Верхний индекс столбцов
+Console.WriteLine("GetLowerBound(0): " + array.GetLowerBound(0)); // Нижний индекс строк
+Console.WriteLine("GetLowerBound(1): " + array.GetLowerBound(1)); // Нижний индекс столбцов
 
 Console.WriteLine("=========");
 
@@ -137,6 +135,7 @@ for (int i = 0; i < rows; i++)
     {
         Console.Write($"{array[i, j]} \t");
     }
+
     Console.WriteLine();
 }
 
@@ -145,5 +144,34 @@ foreach (int item in array)
 {
     Console.Write($"{item} ");
 }
-    
+*/
 
+using TypesAndOperators;
+Console.Write(@"
+Выберите задание:
+1 - Проверка вхождения числа в массив
+2 - Удаление заданного числа из массива
+3 - Создание массива случайных чисел
+4 - Сравнение среднего арифметического двух массивов
+Введите число 1 - 4
+");
+var task = Helpers.GetNumberFromConsole();
+
+switch (task)
+{
+    case 1:
+        FirstTask.CheckNumberIsInArray();
+        break;
+    case 2:
+        SecondTask.ChangeArray();
+        break;
+    case 3:
+        ThirdTask.RandomArray();
+        break;
+    case 4:
+        FourthTask.CompareAverageOfTwoArrays();
+        break;
+    default:
+        Console.WriteLine("Некорректный номер задания");
+        break;
+}
