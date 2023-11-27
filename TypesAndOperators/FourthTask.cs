@@ -15,6 +15,7 @@ public static class FourthTask
         Console.WriteLine($"Первый массив = [{string.Join(", ", numbers1)}]");
         Console.WriteLine($"Второй массив = [{string.Join(", ", numbers2)}]");
         int sum1 = 0;
+        
         for (int i = 0; i < numbers1.Length; i++)
         {
             sum1 += numbers1[i];
@@ -23,6 +24,7 @@ public static class FourthTask
         int aveNumber1 = sum1 / (numbers1.Length);
         Console.WriteLine($"Среднее значение из чисел первого массива = {aveNumber1}");
         int sum2 = 0;
+        
         for (int i = 0; i < numbers2.Length; i++)
         {
             sum2 += numbers2[i];
@@ -31,7 +33,7 @@ public static class FourthTask
         int aveNumber2 = sum2 / (numbers2.Length);
         Console.WriteLine($"Среднее значение из чисел второго массива = {aveNumber2}");
 
-        switch ((aveNumber1, aveNumber2))
+        switch (aveNumber1, aveNumber2)
         {
             case (_, _) when aveNumber1 > aveNumber2:
                 Console.WriteLine("Среднее арифметическое у массива 1 больше, чем у массива 2");

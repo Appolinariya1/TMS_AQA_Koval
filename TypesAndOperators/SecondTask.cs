@@ -9,39 +9,37 @@ public static class SecondTask
 {
     public static void ChangeArray()
     {
-        Console.Write("Введите число: ");
-        int inputNumber = Helpers.GetNumberFromConsole();
         int[] numbers = { -3, -2, 99, 0, 2, 99, 3, 99, 99, 99 };
-
-
+        
+        Console.WriteLine($"Исходный массив: [{string.Join(", ", numbers)}]");
+        Console.Write("Введите число, которое хотите удалить: ");
+        
+        int inputNumber = Helpers.GetNumberFromConsole();
         int[] numbersFiltered = new int [numbers.Length];
-
-        int offset = 0;
+        int filteredIndex = 0;
+        
         for (int i = 0; i < numbers.Length; i++)
         {
             if (numbers[i] != inputNumber)
             {
-                numbersFiltered[i - offset] = numbers[i];
-            }
-            else
-            {
-                offset++;
+                numbersFiltered[filteredIndex] = numbers[i];
+                filteredIndex++;
             }
         }
 
-        if (offset == 0)
+        if (filteredIndex == numbers.Length)
         {
             Console.WriteLine($"Числа {inputNumber} нет в заданном массиве");
             return;
         }
 
-        var resultNumbers = new int[numbers.Length - offset];
+        var resultNumbers = new int[filteredIndex];
+        
         for (int i = 0; i < resultNumbers.Length; i++)
         {
             resultNumbers[i] = numbersFiltered[i];
         }
-
-        Console.WriteLine($"Исходный массив: [{string.Join(", ", numbers)}]");
+        
         Console.WriteLine($"Новый массив: [{string.Join(", ", resultNumbers)}]");
     }
 }
