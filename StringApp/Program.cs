@@ -120,14 +120,14 @@ namespace StringApp
                           """;
             Console.WriteLine(text_inter);
 
-            
+
             string s5 = "apple";
             string s6 = "a day";
             string s7 = "keeps";
 
             string[] values = new string[] { s5, s6, s7 };
             string str_final = string.Join(" : ", values);
-            Console.WriteLine(str_final); 
+            Console.WriteLine(str_final);
 
             // -=================== Join (Объединение строк)
               string join_str1 = "Have";
@@ -332,7 +332,7 @@ namespace StringApp
             // Пример 3: Проверка наличия символа
             bool containsCharacter = mainString.Contains(',');
             Console.WriteLine($"Contains (символ): {containsCharacter}");                   // Вывод: True
- 
+
             // -=================== null character ===================-
             // The null character can be displayed and counted, like other chars.
             string s12 = "\x0" + "abc";
@@ -343,11 +343,11 @@ namespace StringApp
             Console.WriteLine("*" + s22 + "*");
             // Output of the following line: 4
             Console.WriteLine(s22.Length);
-            
+
             Console.WriteLine(s12 == s22); //строки не равны
             Console.WriteLine(s12.Equals(s22)); //строки не равны
             Console.WriteLine(s12.CompareTo(s22)); //а тут не видно и кажется, что равны
-            
+
             // -=================== Форматирование строк string.Format ===================-
             string formattedString1 = string.Format("Hello, {0}! Today is {1}.", "John", DateTime.Now.DayOfWeek);
             Console.WriteLine(formattedString1);                                            // Вывод: Hello, John! Today is Wednesday.
@@ -359,12 +359,12 @@ namespace StringApp
             // Пример 3: Форматирование с использованием различных форматов
             string formattedString3 = string.Format("Decimal: {0:D}, Hexadecimal: {0:X}, Scientific: {1:E}", 42, Math.PI);
             Console.WriteLine(formattedString3);                                            // Вывод: Decimal: 42, Hexadecimal: 2A, Scientific: 3.141593E+00
-            
+
             // Настраиваемые форматы
             long number = 19876543210;
             string result = string.Format("{0:+# (###) ###-##-##}", number);
             Console.WriteLine(result); // +1 (987) 654-32-10
-           
+
             // -=================== String Builder ===================
             // -=================== Constructor
             StringBuilder sbAppend = new StringBuilder();
@@ -375,16 +375,16 @@ namespace StringApp
             // -=================== Append ===================
             sbAppend.Append("Hello, ");
             sbAppend.Append("world!");
-            
+
             Console.WriteLine($"Append : {sbAppend}");                     // Hello World!
             Console.WriteLine($"Length : {sbAppend.Length}");              // 13
-            
+
             // -=================== AppendLine
             StringBuilder sbAppendLine = new StringBuilder();
             sbAppendLine.Append("Hello, ");
             sbAppendLine.AppendLine("world!");
             sbAppendLine.AppendLine("How are you?");
-        
+
             Console.WriteLine($"AppendLine : {sbAppendLine}"); */
             /* Вывод:
                Hello,
@@ -397,55 +397,55 @@ namespace StringApp
             StringBuilder sb1AppendFormat = new StringBuilder();
             sb1AppendFormat.AppendFormat("Hello, {0}! Today is {1}.", "John", DateTime.Now.DayOfWeek);
             Console.WriteLine(sb1AppendFormat.ToString());                          // Вывод: Hello, John! Today is Wednesday.
-            
+
             // Пример 2: Форматирование чисел
             StringBuilder sb2AppendFormat = new StringBuilder();
             sb2AppendFormat.AppendFormat("The price is: {0:C}", 123.45);
             Console.WriteLine(sb2AppendFormat.ToString());                          // Вывод: The price is: $123.45
-            
+
             // Пример 3: Форматирование с использованием различных форматов
             StringBuilder sb3AppendFormat = new StringBuilder();
             sb3AppendFormat.AppendFormat("Decimal: {0:D}, Hexadecimal: {0:X}, Scientific: {1:E}", 42, Math.PI);
             Console.WriteLine(sb3AppendFormat.ToString());                          // Вывод: Decimal: 42, Hexadecimal: 2A, Scientific: 3.141593E+00
-             
+
             // -=================== Replace
             StringBuilder sbReplace = new StringBuilder("Hello, world!");
             sbReplace.Replace("world", "C#");
-        
+
             Console.WriteLine($"Replace : {sbReplace}");                    // Вывод: Hello, C#!
             // -=================== Remove
             StringBuilder sbRemove = new StringBuilder("Hello, world!");
             sbRemove.Remove(7, 6);                                          // Удаляем "world"
-        
+
             Console.WriteLine($"Remove : {sbRemove}");                      // Вывод: Hello!
             // -=================== Insert
             StringBuilder sbInsert = new StringBuilder("Hello!");
             sbInsert.Insert(5, " world");
-        
-            Console.WriteLine($"Insert : {sbInsert}");                      // Вывод: Hello world!   
-            
+
+            Console.WriteLine($"Insert : {sbInsert}");                      // Вывод: Hello world!
+
             // -=================== Capacity
             StringBuilder sbCapacity = new StringBuilder();
 
             // Получаем текущую емкость
             int initialCapacity = sbCapacity.Capacity;
             Console.WriteLine($"Initial Capacity: {initialCapacity}");
-            
+
             // Добавляем текст
             sbCapacity.Append("Hello, world! 666666666666666666666666666666666");
 
             // Получаем новую емкость после добавления текста
             int newCapacity = sbCapacity.Capacity;
             Console.WriteLine($"New Capacity: {newCapacity}");
-            
+
             // Устанавливаем явно емкость (в данном случае, увеличиваем)
             sbCapacity.Capacity = newCapacity * 2;
 
             // Получаем емкость после установки
             int updatedCapacity = sbCapacity.Capacity;
             Console.WriteLine($"Updated Capacity: {updatedCapacity}");
-            */
-            
+
+
             //==================== Регулярные выражения (Regex)============
             //==================Соответствие строки регулярному выражению
             string input = "Hello, 123!";
@@ -460,12 +460,12 @@ namespace StringApp
             {
                 Console.WriteLine("Строка не содержит цифры.");
             }
-            
+
             // -=================== Извлечение подстрок с использованием групп
             // -=================== Пример 1
             string input1 = "Дата: 2023-11-19";
             string pattern1 = @"Дата: (\d{4}-\d{2}-\d{2})"; // Группа для извлечения даты
-            
+
             Match match = Regex.Match(input1, pattern1);
 
             if (match.Success)
@@ -477,7 +477,7 @@ namespace StringApp
             {
                 Console.WriteLine("Дата не найдена.");
             }
-            
+
             // -=================== Пример 2
             string input11 = "Дата: 2023-11-19, Дата: 2023-12-25";
             string pattern12 = @"Дата: (\d{4}-\d{2}-\d{2})"; // Группа для извлечения даты
@@ -487,7 +487,7 @@ namespace StringApp
             if (matches.Count > 0)
             {
                 Console.WriteLine($"Найдено {matches.Count} вхождений:");
-            
+
                 foreach (Match matchItem in matches)
                 {
                     string date = matchItem.Groups[1].Value;
@@ -498,17 +498,68 @@ namespace StringApp
             {
                 Console.WriteLine("Дата не найдена.");
             }
-            
+
             // -=================== Замена с использованием регулярного выражения
             string input2 = "Текст с цифрами: 12345 и 67890";
             string pattern2 = @"\d+"; // = @"(\d+) Шаблон: одна или более цифр
-            
+
             string replacement = "###";
 
             string result2 = Regex.Replace(input2, pattern2, replacement);
 
             Console.WriteLine($"Исходная строка: {input2}");
             Console.WriteLine($"Строка после замены: {result2}");
+            */
+            Console.Write("""
+
+                          Выберите задание:
+                          1 - Изменение слова в тексте и удаление цифр
+                          2 - Соединить слова во фразу
+                          3 - Разделить строку
+                          4 - Изменить плохой день на хороший
+                          Введите число 1 - 4
+
+                          """);
+
+            int GetNumberFromConsole()
+            {
+                string? inputString = Console.ReadLine();
+                if (string.IsNullOrEmpty(inputString))
+                {
+                    Console.WriteLine("Некорректный ввод. Пожалуйста, введите число.");
+                    return GetNumberFromConsole();
+                }
+
+                int result;
+                if (!int.TryParse(inputString, out result))
+                {
+                    Console.WriteLine("Некорректный ввод. Пожалуйста, введите число.");
+                    return GetNumberFromConsole();
+                }
+
+                return result;
+            }
+
+            var task = GetNumberFromConsole();
+
+            switch (task)
+            {
+                case 1:
+                    FirstTask.ChangeText();
+                    break;
+                case 2:
+                    SecondTask.ConcatenateStrings();
+                    break;
+                case 3:
+                    ThirdTask.SplitString();
+                    break;
+                case 4:
+                    FourthTask.ChangeBadToGood();
+                    break;
+                default:
+                    Console.WriteLine("Некорректный номер задания");
+                    break;
+            }
         }
     }
 }
