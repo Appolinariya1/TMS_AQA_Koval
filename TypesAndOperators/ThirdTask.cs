@@ -23,30 +23,26 @@ public static class ThirdTask
 
         int minNumber = numbers[0];
         int maxNumber = numbers[0];
-        
+
         for (int i = 1; i < numbers.Length; i++)
         {
             if (minNumber > numbers[i])
             {
                 minNumber = numbers[i];
             }
+
             if (maxNumber < numbers[i])
             {
                 maxNumber = numbers[i];
             }
         }
 
-        int sum = 0;
-        
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            sum += numbers[i];
-        }
+        string average = numbers.Length % 2 == 1
+            ? $"{numbers[numbers.Length / 2]}"
+            : $"{numbers[numbers.Length / 2 - 1]}, {numbers[numbers.Length / 2]}";
 
-        int aveNumber = sum / (numbers.Length);
-        
         Console.WriteLine($"Минимальное значение из чисел массива = {minNumber} ");
-        Console.WriteLine($"Среднее значение из чисел массива = {aveNumber}");
+        Console.WriteLine($"Среднее значение из чисел массива = {average}");
         Console.WriteLine($"Максимальное значение из чисел массива = {maxNumber} ");
     }
 }
