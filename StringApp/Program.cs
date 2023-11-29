@@ -517,7 +517,8 @@ namespace StringApp
                           2 - Соединить слова во фразу
                           3 - Разделить строку
                           4 - Изменить плохой день на хороший
-                          Введите число 1 - 4
+                          6 - Отредактировать текст
+                          Введите число 1 - 4 или 6
 
                           """);
 
@@ -555,6 +556,9 @@ namespace StringApp
                     break;
                 case 4:
                     FourthTask.ChangeBadToGood();
+                    break;
+                case 6:
+                    SixthTask.ClearText();
                     break;
                 default:
                     Console.WriteLine("Некорректный номер задания");
