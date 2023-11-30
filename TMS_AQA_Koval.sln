@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringApp", "StringApp\Stri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes", "Classes\Classes.csproj", "{F57FA470-491C-42EC-AD4C-ACA5BD867770}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstraction", "Abstraction\Abstraction.csproj", "{1DC28040-B1EA-4988-A191-C87F640B954C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{F57FA470-491C-42EC-AD4C-ACA5BD867770}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F57FA470-491C-42EC-AD4C-ACA5BD867770}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F57FA470-491C-42EC-AD4C-ACA5BD867770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DC28040-B1EA-4988-A191-C87F640B954C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DC28040-B1EA-4988-A191-C87F640B954C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DC28040-B1EA-4988-A191-C87F640B954C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DC28040-B1EA-4988-A191-C87F640B954C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
