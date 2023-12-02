@@ -114,11 +114,11 @@ foreach (var card in cards)
     card.CardInfo();
 }
 
-//вспомогательный метод
+//вспомогательный метод для задания 2
 static int GetNumberFromConsole(bool onlyPositive = false)
 {
     string? inputString = Console.ReadLine();
-    
+
     if (string.IsNullOrEmpty(inputString))
     {
         Console.WriteLine("Некорректный ввод. Пожалуйста, введите число.");
@@ -126,7 +126,7 @@ static int GetNumberFromConsole(bool onlyPositive = false)
     }
 
     int result;
-    
+
     if (!int.TryParse(inputString, out result))
     {
         Console.WriteLine("Некорректный ввод. Пожалуйста, введите число.");
@@ -141,3 +141,34 @@ static int GetNumberFromConsole(bool onlyPositive = false)
 
     return result;
 }
+
+/*
+Задание 3
+Создать класс, описывающий банкомат.
+Количество купюр, находящихся в банкомате, должен задаваться тремя
+полями: количеством купюр номиналом 20, 50 и 100.
+
+Создать конструктор с тремя параметрами - количеством купюр каждого
+номинала.
+
+Реализовать методы:
+для добавления денег в банкомат;
+для снятия денег - возвращает булевое значение - успешность выполнения операции.
+
+При снятии денег метод должен распечатывать какими купюрами и в каком количестве выдаётся сумма.
+
+ */
+
+//Сценарий проверки 
+Console.WriteLine(" \n========= Задание 3 =========");
+var atm = new ATM(4, 3, 1); //создаем банкомат
+atm.DebugShowAmount(); //проверяем количество купюр в банкомате
+atm.PutMoney(1, 1, 1); //кладем купюры в банкомат
+atm.DebugShowAmount();
+atm.GetMoney(250);
+atm.GetMoney(225); //проверяем, что банкомат может выдать только сумму кратную номиналу имеющихся купюр
+atm.GetMoney(20);
+atm.DebugShowAmount();
+atm.GetMoney(230);
+atm.DebugShowAmount();
+atm.GetMoney(20); //проверяем, что операция не выполняется, когда в банкомате закончились купюры
