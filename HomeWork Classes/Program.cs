@@ -64,3 +64,80 @@ foreach (var phone in phones)
         GetRandomNumber()
     );
 }
+
+/*
+ Задание 2
+Создать класс CreditCard c полями
+номер счета,
+текущая сумма на счету.
+
+Добавьте методы:
+который позволяет зачислять сумму на кредитную карту;
+который позволяет снимать некоторую сумму с карты;
+который выводит текущую информацию о карточке.
+
+Напишите программу, которая создает три объекта класса CreditCard у которых заданы номер счета и начальная сумма.
+
+Тестовый сценарий для проверки:
+Положите деньги на первые две карточки и снимите с третьей.
+Выведите на экран текущее состояние всех трех карточек.
+
+*/
+
+Console.WriteLine("\n ========= Задание 2 =========");
+
+CreditCard[] cards = new[]
+{
+    new CreditCard(10000001, 1000),
+    new CreditCard(20000001, 2000),
+    new CreditCard(30000001, 3000)
+};
+
+Console.WriteLine("Информация по картам до операций");
+foreach (var card in cards)
+{
+    card.CardInfo();
+}
+
+Console.WriteLine($"Введите сумму для зачисления на карту {cards[0].AccountNumber}");
+cards[0].PutMoney(GetNumberFromConsole(true));
+
+Console.WriteLine($"Введите сумму для зачисления на карту {cards[1].AccountNumber}");
+cards[1].PutMoney(GetNumberFromConsole(true));
+
+Console.WriteLine($"Введите сумму для снятия с карты {cards[2].AccountNumber}");
+cards[2].GetMoney(GetNumberFromConsole(true));
+
+Console.WriteLine("Информация по картам после проведенных операций");
+foreach (var card in cards)
+{
+    card.CardInfo();
+}
+
+//вспомогательный метод
+static int GetNumberFromConsole(bool onlyPositive = false)
+{
+    string? inputString = Console.ReadLine();
+    
+    if (string.IsNullOrEmpty(inputString))
+    {
+        Console.WriteLine("Некорректный ввод. Пожалуйста, введите число.");
+        return GetNumberFromConsole(onlyPositive);
+    }
+
+    int result;
+    
+    if (!int.TryParse(inputString, out result))
+    {
+        Console.WriteLine("Некорректный ввод. Пожалуйста, введите число.");
+        return GetNumberFromConsole(onlyPositive);
+    }
+
+    if (onlyPositive && result <= 0)
+    {
+        Console.WriteLine("Некорректный ввод. Пожалуйста, введите целое положительное число");
+        return GetNumberFromConsole(onlyPositive);
+    }
+
+    return result;
+}
