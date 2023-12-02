@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encapsulation", "Encapsulat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polymorphism", "Polymorphism\Polymorphism.csproj", "{0368B9B9-F357-4EBF-8680-90913C7D6D8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Properties", "Properties\Properties.csproj", "{125AD99B-7949-4583-88BF-60BEBCB48EBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +62,9 @@ Global
 		{0368B9B9-F357-4EBF-8680-90913C7D6D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0368B9B9-F357-4EBF-8680-90913C7D6D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0368B9B9-F357-4EBF-8680-90913C7D6D8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{125AD99B-7949-4583-88BF-60BEBCB48EBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{125AD99B-7949-4583-88BF-60BEBCB48EBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{125AD99B-7949-4583-88BF-60BEBCB48EBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{125AD99B-7949-4583-88BF-60BEBCB48EBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

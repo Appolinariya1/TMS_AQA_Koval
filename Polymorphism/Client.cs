@@ -6,14 +6,18 @@ public class Client
         public string PhoneNumber;
         public string Email;
 
-        public Client(int id)
-        {
-                throw new NotImplementedException();
-        }
-
         public void Activate() {}
         public void Pause() {}
         public void Deactivate() {}
+        
+        public Client(int id)
+        {
+                Id = id;
+        }
+
+        public Client()
+        {
+        }
 
         public void CountBill(int hours, int rate) // можно создать несколько методов с одним именем, но с разной сигнатурой (разн. типы параметров или разн. кол-во)
         {
