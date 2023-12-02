@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes", "Classes\Classes.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstraction", "Abstraction\Abstraction.csproj", "{1DC28040-B1EA-4988-A191-C87F640B954C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{4EF33F06-75AB-43D7-8624-BB31E5F2DDE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{1DC28040-B1EA-4988-A191-C87F640B954C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DC28040-B1EA-4988-A191-C87F640B954C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DC28040-B1EA-4988-A191-C87F640B954C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EF33F06-75AB-43D7-8624-BB31E5F2DDE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EF33F06-75AB-43D7-8624-BB31E5F2DDE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EF33F06-75AB-43D7-8624-BB31E5F2DDE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EF33F06-75AB-43D7-8624-BB31E5F2DDE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
