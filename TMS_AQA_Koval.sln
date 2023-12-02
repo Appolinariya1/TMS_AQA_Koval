@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classes", "Classes\Classes.csproj", "{F57FA470-491C-42EC-AD4C-ACA5BD867770}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork Classes", "HomeWork Classes\HomeWork Classes.csproj", "{AB775C2C-2797-4D25-AA2E-2091051139D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{F57FA470-491C-42EC-AD4C-ACA5BD867770}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F57FA470-491C-42EC-AD4C-ACA5BD867770}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F57FA470-491C-42EC-AD4C-ACA5BD867770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB775C2C-2797-4D25-AA2E-2091051139D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB775C2C-2797-4D25-AA2E-2091051139D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB775C2C-2797-4D25-AA2E-2091051139D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB775C2C-2797-4D25-AA2E-2091051139D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
