@@ -25,7 +25,7 @@ wizard.PrintInfo();
 Character[] characters = new Character[3];
 
 characters[0] = new Warrior(1);
-
+characters[0].Clan = "Бобры";
 
 characters[1] = new Warrior(1);
 characters[2] = new Warrior(1000);
