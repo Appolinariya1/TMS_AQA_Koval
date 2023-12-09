@@ -45,6 +45,12 @@ SuperTransport[] transports = new SuperTransport[]
     new Tramcar() { AmountSeats = 40, DepartureTime = new TimeOnly(09, 05), Destination = "Market", Number = 99 }
 };
 
+Console.WriteLine("Our transport park includes such types of transport:");
+foreach (var transport in transports)
+{
+    tps.PrintTransportType(transport);
+}
+Console.WriteLine("\nTransport info:");
 transports = tps.SortByAmountSeats(transports);
 foreach (var transport in transports)
 {
@@ -54,7 +60,7 @@ foreach (var transport in transports)
 var searchResults = new SuperTransport[transports.Length];
 int searchIndex = 0;
 
-Console.WriteLine("Enter the departure time in the format hh:mm or leave the field blank");
+Console.WriteLine("\nEnter the departure time in the format hh:mm or leave the field blank");
 string rawDepartureTime = Console.ReadLine();
 TimeOnly? departureTime = null;
 if (rawDepartureTime != string.Empty)
@@ -81,15 +87,18 @@ foreach (var transport in transports)
     searchIndex++;
 }
 
+bool isAnyResultDisplayed = false;
+
 foreach (var transport in searchResults)
 {
     if (transport != null)
     {
         transport.WriteTransportInfo();
+        isAnyResultDisplayed = true;
     }
 }
-Console.WriteLine("\nOur transport park includes such types of transport:");
-foreach (var transport in transports)
+
+if (!isAnyResultDisplayed)
 {
-    tps.PrintTransportType(transport);
+    Console.WriteLine("There is no suitable transport for your request in our transport park");
 }

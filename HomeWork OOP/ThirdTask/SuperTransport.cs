@@ -34,6 +34,6 @@ public abstract class SuperTransport
 
     public void WriteTransportInfo() //метод, который нельзя переопределить
     {
-        Console.WriteLine($"[{this.GetType().Name}] Number = {Number}, Destination = {Destination}, Departure time = {DepartureTime}, Amount of seat = {AmountSeats}");
+        Console.WriteLine($"[{this.GetType().Name}] Number = {Number}, Destination = {Destination}, Departure time = {DepartureTime}, Amount of seats = {AmountSeats}");
     }
 }
