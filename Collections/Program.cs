@@ -1,3 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using Collections.IList;
 
-Console.WriteLine("Hello, World!");
+// -==================== IList ====================-
+// -==================== ArrayList
+//new ArrayListExample().Run();
+
+// -==================== List<T>
+new ListExample().Run();
