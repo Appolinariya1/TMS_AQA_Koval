@@ -28,9 +28,9 @@ Console.WriteLine("\nЗадание 2");
 var hospital = new Hospital();
 var patients = new Patient[]
 {
-    new Patient("Пациент 1", new TreatmentPlan(1)),
-    new Patient("Пациент 2", new TreatmentPlan(2)),
-    new Patient("Пациент 3", new TreatmentPlan(99))
+    new Patient("Patient 1", new TreatmentPlan(1)),
+    new Patient("Patient 2", new TreatmentPlan(2)),
+    new Patient("Patient 3", new TreatmentPlan(99))
 };
 hospital.StartDay(patients);
 
