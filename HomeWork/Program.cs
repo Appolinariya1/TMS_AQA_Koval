@@ -8,7 +8,7 @@ Console.WriteLine("Задание 1\nСоздан массив из фигур:\
 double pGeneral = 0;
 double sGeneral = 0;
 
-Figure[] figures = new Figure[5]
+Figure[] figures = new Figure[]
 {
     new Circle(5),
     new Circle(1.5f),
@@ -29,9 +29,9 @@ Console.WriteLine($"\nПлощадь всех фигур = {Math.Round(sGeneral,
 
 Console.WriteLine("\nЗадание 2\nНа нашем складе есть товары:");
 
-var productsDB = new List<BaseProduct>();
+var productsDb = new List<BaseProduct>();
 
-productsDB.AddRange( new BaseProduct[]
+productsDb.AddRange( new BaseProduct[]
 {
     new Product("Колбаса", 400, new DateOnly(2023, 12, 10), new DateOnly(2024, 01, 10)),
     new Product("Хлеб", 40, new DateOnly(2023, 12, 15), new DateOnly(2023, 12, 25)),
@@ -51,14 +51,14 @@ productsDB.AddRange( new BaseProduct[]
     })
 });
 
-foreach (var product in productsDB)
+foreach (var product in productsDb)
 {
     product.PrintProductInfo();
 }
 
-foreach (var product in productsDB)
+foreach (var product in productsDb)
 {
-    if (product.CheckExpirationDate())
+    if (product.IsExpired())
     {
         Console.Write("\nНайден просроченный продукт: ");
         product.PrintProductInfo();

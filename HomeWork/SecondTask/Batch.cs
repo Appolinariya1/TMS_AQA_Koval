@@ -21,7 +21,7 @@ public class Batch : BaseProduct
         Console.WriteLine($"\nПартия продукта {Name} из {Amount} шт. Общая цена продуктов в партии = {Price}. Дата производства {ManufactureDate}, продукты годны до {ExpirationDate}");
     }
 
-    public override bool CheckExpirationDate()
+    public override bool IsExpired()
     {
         return DateOnly.FromDateTime(DateTime.Now) > ExpirationDate;
     }

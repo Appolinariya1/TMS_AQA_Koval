@@ -21,5 +21,5 @@ public abstract class BaseProduct
     }
 
     public abstract void PrintProductInfo();
-    public abstract bool CheckExpirationDate();
+    public abstract bool IsExpired();
 }

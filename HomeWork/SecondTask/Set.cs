@@ -21,7 +21,7 @@ public class Set : BaseProduct
         }
     }
 
-    public override bool CheckExpirationDate()
+    public override bool IsExpired()
     {
         return DateOnly.FromDateTime(DateTime.Now) > ExpirationDate;
     }

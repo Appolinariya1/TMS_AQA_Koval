@@ -16,7 +16,7 @@ public class Product : BaseProduct
         Console.WriteLine($"Наименование: {Name}. Цена: {Price}. Изготовлен {ManufactureDate}. Годен до {ExpirationDate}");
     }
 
-    public override bool CheckExpirationDate()
+    public override bool IsExpired()
     {
         return DateOnly.FromDateTime(DateTime.Now) > ExpirationDate;
     }
