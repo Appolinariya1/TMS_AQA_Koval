@@ -17,7 +17,7 @@ public class Example5
         Operation operation = SelectOperation(OperationType.Add);
         Console.WriteLine(operation(10, 4));
 
-        operation = SelectOperation(OperationType.Subtrack);
+        operation = SelectOperation(OperationType.Subtract);
         Console.WriteLine(operation(10, 4));
         
         operation = SelectOperation(OperationType.Multiply);
@@ -51,7 +51,7 @@ public class Example5
         {
             case OperationType.Add:
                 return new Operation(ShowData) + Add;
-            case OperationType.Subtrack: return Subtrack;
+            case OperationType.Subtract: return Subtrack;
             default: return Multiply;
         }
     }

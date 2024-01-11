@@ -3,6 +3,6 @@ namespace Delegate;
 public enum OperationType
 {
     Add, 
-    Subtrack, 
+    Subtract, 
     Multiply
 }
