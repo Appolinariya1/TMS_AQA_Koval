@@ -23,4 +23,22 @@ public static class Helpers
 
         return result;
     }
+
+    public static int? GetNumberFromConsoleOrNull()
+    {
+        string? inputString = Console.ReadLine();
+        if (string.IsNullOrEmpty(inputString))
+        {
+            return null;
+        }
+
+        int result;
+        if (!int.TryParse(inputString, out result))
+        {
+            Console.WriteLine("Некорректный ввод. Пожалуйста, введите число.");
+            return GetNumberFromConsole();
+        }
+
+        return result;
+    }
 }
