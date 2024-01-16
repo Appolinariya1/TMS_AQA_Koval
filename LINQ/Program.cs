@@ -32,6 +32,47 @@ public class Program
         */
 
         // Два в одном
-        new TwoInOne().Run();
+        //new TwoInOne().Run();
+
+        //Переменные
+        // new Variables().RunQuerySyntax();
+        // new Variables().RunMethodSyntax();
+        
+        // Агрегация данных
+        // new DataAggregation().RunQuerySyntax(); 
+        // new DataAggregation().RunMethodSyntax(); 
+        
+        //Сортировка
+        //new OrderBy().RunQuerySyntax();
+        //new OrderBy().RunMethodSyntax();
+        
+        //Группировка
+        // new GroupBy().RunQuerySyntax();
+        // new GroupBy().RunMethodSyntax();
+        
+        //Объединение, пересечение и разность коллекций:
+        // разность
+        // new Except().RunQuerySyntax();
+        //new Except().RunMethodSyntax();
+        
+        // Пересечение
+        // new Intersect().RunQuerySyntax();
+        // new Intersect().RunMethodSyntax();
+        
+        // Объединение
+        // new Union().RunQuerySyntax();
+        // new Union().RunMethodSyntax();
+        
+        // Удаление дубликатов
+        // new Distinct().RunQuerySyntax();
+        // new Distinct().RunMethodSyntax();
+        
+        // Aggregation
+        //new Aggregation().RunQuerySyntax();
+        //new Aggregation().RunMethodSyntax();
+        
+        // Single Item
+        // new SingleItem().RunQuerySyntax();
+        new SingleItem().RunMethodSyntax();
     }
 }
