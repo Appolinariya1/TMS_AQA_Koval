@@ -13,6 +13,7 @@ public class TestObjectSet : IEnumerable<Person>
                 new Person("Oleg", 23),
                 new Person("Alex", 45),
                 new Person("Olga", 25),
+                new Person("Olga", 36),
                 new Person("Stanislav", 36),
                 new Person("Tom", 45),
             };

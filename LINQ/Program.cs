@@ -73,6 +73,17 @@ public class Program
         
         // Single Item
         // new SingleItem().RunQuerySyntax();
-        new SingleItem().RunMethodSyntax();
+        //new SingleItem().RunMethodSyntax();
+        
+        // Методы Skip и Take
+        // new SkipTake().RunQuerySyntax();
+        // new SkipTake().RunMethodSyntax();
+        
+        // Методы
+        //new Condition().RunMethodSyntax();
+        
+        //Методы Join
+        new Join().RunQuerySyntax();
+        new Join().RunMethodSyntax();
     }
 }
