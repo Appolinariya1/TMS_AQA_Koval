@@ -57,9 +57,9 @@ public class Lambda
         PrintHandler print = message => Console.WriteLine(message);
         print("Hello MTS");
 
-        var print1 = (string message = "default value") => Console.WriteLine(message);
-        print1();
-        print1("Another value");
+        // var print1 = (string message = "default value") => Console.WriteLine(message);
+        // print1();
+        // print1("Another value");
     }
 
     delegate int Operation1(int x, int y);

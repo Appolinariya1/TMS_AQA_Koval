@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegate", "Delegate\Delega
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event", "Event\Event.csproj", "{B85348B7-AEFB-4A93-80E8-D20693D9ECE9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork_DelegateEvents", "HomeWork_DelegateEvents\HomeWork_DelegateEvents.csproj", "{852491A2-C66F-4F04-9B15-F865B4710E14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{B85348B7-AEFB-4A93-80E8-D20693D9ECE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B85348B7-AEFB-4A93-80E8-D20693D9ECE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B85348B7-AEFB-4A93-80E8-D20693D9ECE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{852491A2-C66F-4F04-9B15-F865B4710E14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{852491A2-C66F-4F04-9B15-F865B4710E14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{852491A2-C66F-4F04-9B15-F865B4710E14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{852491A2-C66F-4F04-9B15-F865B4710E14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
