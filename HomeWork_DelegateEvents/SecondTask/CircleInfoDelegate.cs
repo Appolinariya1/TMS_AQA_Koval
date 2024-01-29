@@ -1,3 +1,3 @@
 namespace HomeWork_DelegateEvents.SecondTask;
 
-public delegate double CircleInfoDelegate(double r);
+public delegate double CircleInfoDelegate(double radius);

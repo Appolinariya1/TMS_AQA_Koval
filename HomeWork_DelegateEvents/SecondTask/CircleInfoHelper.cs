@@ -2,24 +2,24 @@ namespace HomeWork_DelegateEvents.SecondTask;
 
 public class CircleInfoHelper
 {
-    public double GetCircleLength(double r)
+    public double GetCircleLength(double radius)
     {
-        var d = 2 * Math.PI * r;
-        Console.WriteLine($"d = {d}");
-        return d;
+        var circleLength = 2 * Math.PI * radius;
+        Console.WriteLine($"Длина окружности = {circleLength}");
+        return circleLength;
     }
 
-    public double GetCircleArea(double r)
+    public double GetCircleArea(double radius)
     {
-        var s = Math.PI * r * r;
-        Console.WriteLine($"s = {s}");
-        return s;
+        var circleArea = Math.PI * radius * radius;
+        Console.WriteLine($"Площадь круга = {circleArea}");
+        return circleArea;
     }
 
-    public double GetBallVolume(double r)
+    public double GetBallVolume(double radius)
     {
-        var v = Math.PI * Math.Pow(r, 3) * 4 / 3;
-        Console.WriteLine($"v = {v}");
-        return v;
+        var ballVolume = Math.PI * Math.Pow(radius, 3) * 4.0 / 3.0;
+        Console.WriteLine($"Объем шара = {ballVolume}");
+        return ballVolume;
     }
 }
