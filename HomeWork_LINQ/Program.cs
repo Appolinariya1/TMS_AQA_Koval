@@ -8,7 +8,7 @@ var listNumbers = new List<int>() { -5, -4, -3, -2, -2, -1, 0, 1, 2, 3, 3, 3, 4,
 var resultNumbers = listNumbers.Where(number => Math.Abs(number) % 2 == 1).Distinct();
 Console.WriteLine(String.Join(", ", resultNumbers));
 
-Console.WriteLine("Задание 2");
+Console.WriteLine("\nЗадание 2");
 
 var clientsList = new List<Client>()
 {
@@ -22,3 +22,20 @@ var clientsList = new List<Client>()
 
 var laziestClient = ClientSearchEngine.GetLaziestClient(clientsList);
 Console.WriteLine(laziestClient);
+
+Console.WriteLine("\nЗадание 3");
+var listStrings = new List<string>()
+{
+    "ELEPHANT",
+    "CAT",
+    "DOG",
+    "MOUSE",
+    "SHARK"
+};
+
+listStrings = listStrings
+    .OrderBy(element => element.Length)
+    .ThenByDescending(element => element)
+    .ToList();
+
+Console.WriteLine(String.Join("\n", listStrings));
