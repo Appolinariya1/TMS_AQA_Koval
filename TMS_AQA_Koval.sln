@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{4543D0B1-B707-4E93-95C3-4D1F77994780}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork_LINQ", "HomeWork_LINQ\HomeWork_LINQ.csproj", "{6AE02113-C20C-4E1C-91D8-04A74F964A46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{4543D0B1-B707-4E93-95C3-4D1F77994780}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4543D0B1-B707-4E93-95C3-4D1F77994780}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4543D0B1-B707-4E93-95C3-4D1F77994780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AE02113-C20C-4E1C-91D8-04A74F964A46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AE02113-C20C-4E1C-91D8-04A74F964A46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AE02113-C20C-4E1C-91D8-04A74F964A46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AE02113-C20C-4E1C-91D8-04A74F964A46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
