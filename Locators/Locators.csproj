@@ -7,6 +7,7 @@
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
+        <RootNamespace>SeleniumBasic</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -28,8 +29,8 @@
       <Content Include="Resources\chromedriver.exe">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
-      <None Remove="appsettings.json" />
-      <Content Include="appsettings.json">
+      <None Remove="Resources\index.html" />
+      <Content Include="Resources\index.html">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
     </ItemGroup>

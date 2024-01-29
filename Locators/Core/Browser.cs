@@ -1,7 +1,7 @@
-using NUnitTest.Utilites.Configuration;
 using OpenQA.Selenium;
-//Лучший вариант (все сделается само - скачается веб драйвер в зависимости от версии хрома, пропишется путь и т.д.)
-namespace NUnitTest.Core
+using SeleniumBasic.Helpers.Configuration;
+
+namespace SeleniumBasic.Core
 {
     public class Browser
     {

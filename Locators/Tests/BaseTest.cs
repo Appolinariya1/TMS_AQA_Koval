@@ -1,9 +1,11 @@
-using NUnitTest.Core;
+
 using OpenQA.Selenium;
+using SeleniumBasic.Core;
 
 namespace SeleniumBasic.Tests;
+
 [Parallelizable(scope: ParallelScope.All)]
-[FixtureLifeCycle(LifeCycle.InstancePerTestCase)] //чтобы инициализация базового класса была для каждого кейса
+[FixtureLifeCycle(LifeCycle.InstancePerTestCase)]
 public class BaseTest
 {
     protected IWebDriver Driver { get; set; }
@@ -13,7 +15,7 @@ public class BaseTest
     {
         Driver = new Browser().Driver;
     }
-    
+
     [TearDown]
     public void TearDown()
     {
