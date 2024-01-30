@@ -4,6 +4,7 @@ namespace SeleniumBasic.Tests;
 
 public class CssSelectorTest : BaseTest
 {
+    //сначала пишем тэг, потом класс, потом атрибут (если несколько)
     [Test]
     public void CssSelectorsTest()
     {
@@ -33,5 +34,54 @@ public class CssSelectorTest : BaseTest
         
         // Поиск всех элементов с тэгом p у которых непосредственный родитель с тэгом div
         Assert.That(Driver.FindElements(By.CssSelector("div > p")).Count, Is.EqualTo(6));
+        
+        // Поиск всех элементов с тэгом p которые идут сразу за элементом с тэго ul
+        Assert.That(Driver.FindElements(By.CssSelector("ul + p")).Count, Is.EqualTo(1));
+
+        // Поиск всех элементов с тэгом div которые являются братьями элементу с тэгом p
+        Assert.That(Driver.FindElements(By.CssSelector("p ~ div")).Count, Is.EqualTo(2));
+
+        // Поиск всех элементов у которых присутствует аттрибут title
+        Assert.That(Driver.FindElements(By.CssSelector("[title]")).Count, Is.EqualTo(1));
+
+        // Поиск всех элементов у которых присутствует аттрибут style с конкретным значением
+        Assert.That(Driver.FindElements(By.CssSelector("[style='overflow: auto;']")).Count, Is.EqualTo(1));
+        Assert.That(Driver.FindElements(By.CssSelector("div.result_output[style='overflow: auto;']")).Count, Is.EqualTo(1)); //избыточный вариант, но идентичный предыдущему
+        
+        // Поиск всех элементов у которых присутствует аттрибут id со значением заканчивающимся на какое-то value
+        Assert.That(Driver.FindElements(By.CssSelector("[id$='ess']")).Count, Is.EqualTo(1));
+        
+        // Поиск всех элементов у которых присутствует аттрибут id со значением начинающимся на какое-то слово
+        Assert.That(Driver.FindElements(By.CssSelector("[id|=my]")).Count, Is.EqualTo(1));
+        
+        // Поиск всех элементов у которых присутствует аттрибут id со значением начинающимся на какое-то value
+        Assert.That(Driver.FindElements(By.CssSelector("[id^=L]")).Count, Is.EqualTo(2));
+
+        // Поиск всех элементов у которых присутствует аттрибут title со значением содержащим слово целиком
+        Assert.That(Driver.FindElements(By.CssSelector("[title~=beautiful]")).Count, Is.EqualTo(1));
+        
+        // Поиск всех элементов у которых присутствует аттрибут title со значением содержащим какой текст
+        Assert.That(Driver.FindElements(By.CssSelector("[title*=beaut]")).Count, Is.EqualTo(1));
+        
+        // Поиск всех disabled элементов
+        Assert.That(Driver.FindElements(By.CssSelector(":disabled")).Count, Is.EqualTo(1));
+        
+        // Поиск всех enabled элементов
+        Assert.That(Driver.FindElements(By.CssSelector(":enabled")).Count, Is.EqualTo(8));
+        
+        // Поиск всех выбранных элементов
+        Assert.That(Driver.FindElements(By.CssSelector(":checked")).Count, Is.EqualTo(2));
+        
+        // Поиск всех элементов c пустым телом
+        Assert.That(Driver.FindElements(By.CssSelector(":empty")).Count, Is.EqualTo(16));
+        
+        // Поиск элемента с тэгом p и которым является первым дочерним элементом
+        Assert.That(Driver.FindElements(By.CssSelector("p:first-child")).Count, Is.EqualTo(1));
+
+        // Поиск элемента с тэгом p и которым является последним дочерним элементом
+        Assert.That(Driver.FindElements(By.CssSelector("p:last-child")).Count, Is.EqualTo(2));
+
+        // Поиск элемента с тэгом p и которым является n-ым дочерним элементом
+        Assert.That(Driver.FindElements(By.CssSelector("p:nth-child(2)")).Count, Is.EqualTo(1));
     }
 }
