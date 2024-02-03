@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
@@ -11,6 +12,11 @@ public class WaitsHelper(IWebDriver driver, TimeSpan timeout)
     public IWebElement WaitForVisibilityLocatedBy(By locator)
     {
         return _wait.Until(ExpectedConditions.ElementIsVisible(locator)); //дождаться + условие, что ждем
+    }
+    
+    public ReadOnlyCollection<IWebElement> WaitForAllVisibleElementsLocatedBy(By locator)
+    {
+        return _wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(locator));
     }
     
     public IWebElement WaitForExists(By locator)
