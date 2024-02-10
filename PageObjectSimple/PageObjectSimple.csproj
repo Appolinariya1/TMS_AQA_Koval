@@ -31,15 +31,18 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="appsettings.json" />
-      <Content Include="appsettings.json">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </Content>
       <None Remove="Resources\download.jpeg" />
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="Resources\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="appsettings.json" />
+      <Content Include="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>
