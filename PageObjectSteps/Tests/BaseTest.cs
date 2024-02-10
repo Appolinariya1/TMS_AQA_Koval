@@ -1,10 +1,10 @@
 using OpenQA.Selenium;
-using SeleniumBasic.Core;
-using SeleniumBasic.Helpers;
-using SeleniumBasic.Helpers.Configuration;
-using SeleniumBasic.Steps;
+using PageObject.Core;
+using PageObject.Helpers;
+using PageObject.Helpers.Configuration;
+using PageObject.Steps;
 
-namespace SeleniumBasic.Tests;
+namespace PageObject.Tests;
 
 //[Parallelizable(scope: ParallelScope.All)]
 //[FixtureLifeCycle(LifeCycle.InstancePerTestCase)]

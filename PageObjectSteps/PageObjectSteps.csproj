@@ -7,7 +7,7 @@
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
-        <RootNamespace>SeleniumBasic</RootNamespace>
+        <RootNamespace>PageObject</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -35,15 +35,14 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Remove="appsettings.json" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Resources\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Content Update="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Content Update="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="appsettings.json" />
+      <Content Include="appsettings.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
     </ItemGroup>

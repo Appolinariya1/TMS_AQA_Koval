@@ -1,21 +1,19 @@
-using NUnitTest.Pages;
-using SeleniumBasic.Helpers.Configuration;
-using SeleniumBasic.Pages;
-using SeleniumBasic.Steps;
+using PageObject.Helpers.Configuration;
+using PageObject.Pages;
+using PageObject.Steps;
 
-namespace SeleniumBasic.Tests;
+namespace PageObject.Tests;
 
 public class LoginTest : BaseTest
 {
     [Test]
-    
     public void SuccessfulLoginTest()
     {
         UserSteps userSteps = new UserSteps(Driver);
-        DashboardPage dashboardPage =
-            userSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
+        DashboardPage dashboardPage = userSteps
+            .SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         
-       Assert.That(dashboardPage.IsPageOpened);
+        Assert.That(dashboardPage.IsPageOpened);
     }
     
     [Test]
@@ -23,22 +21,9 @@ public class LoginTest : BaseTest
     {
         // Проверка
         Assert.That(
-            new LoginPage(Driver)
-                .IncorrectLogin("ssdd", "")
-                .ErrorLabel.Text.Trim(), 
+            new UserSteps(Driver)
+                .IncorrectLogin("ssdd", "gghhhhhhh")
+                .GetErrorLabelText(), 
             Is.EqualTo("Email/Login or Password is incorrect. Please try again."));
-    }
-    
-    [Test]
-    public void SuccessfulLoginStepsTest()
-    {
-        // Actions = Действия
-        
-        
-        // Проверка
-        Assert.That(
-            UserSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password)
-                .TitleLabel.Text.Trim(), 
-            Is.EqualTo("All Projects"));
     }
 }

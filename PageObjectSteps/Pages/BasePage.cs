@@ -1,8 +1,8 @@
 using OpenQA.Selenium;
-using SeleniumBasic.Helpers;
-using SeleniumBasic.Helpers.Configuration;
+using PageObject.Helpers;
+using PageObject.Helpers.Configuration;
 
-namespace SeleniumBasic.Pages;
+namespace PageObject.Pages;
 
 public abstract class BasePage
 {

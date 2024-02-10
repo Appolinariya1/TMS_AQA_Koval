@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace SeleniumBasic.Steps;
+namespace PageObject.Steps;
 
 public class BaseSteps
 {

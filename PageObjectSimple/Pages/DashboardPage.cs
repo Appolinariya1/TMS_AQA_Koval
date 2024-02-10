@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace SeleniumBasic.Pages;
+namespace PageObject.Pages;
 
 public class DashboardPage : BasePage
 {
