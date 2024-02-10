@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace SeleniumBasic.Tests;
+namespace SeleniumBasic.Tests.HomeWork;
 
 public class HwFirstTask : BaseTest
 {
