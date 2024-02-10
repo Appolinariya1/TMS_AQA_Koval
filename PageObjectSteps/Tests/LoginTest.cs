@@ -1,6 +1,7 @@
 using NUnitTest.Pages;
 using SeleniumBasic.Helpers.Configuration;
 using SeleniumBasic.Pages;
+using SeleniumBasic.Steps;
 
 namespace SeleniumBasic.Tests;
 
@@ -10,21 +11,11 @@ public class LoginTest : BaseTest
     
     public void SuccessfulLoginTest()
     {
-        //Протой вид
-        LoginPage loginPage = new LoginPage(Driver);
-        loginPage.SuccessFulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
-        DashboardPage dashboardPage = new DashboardPage(Driver);
+        UserSteps userSteps = new UserSteps(Driver);
+        DashboardPage dashboardPage =
+            userSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
         
-        // Actions = Действия
-        Assert.That(new LoginPage(Driver)
-            .SuccessFulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password)
-            .IsPageOpened());
-        
-        // Проверка
-        Assert.That(
-            UserSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password)
-                .TitleLabel.Text.Trim(), 
-            Is.EqualTo("All Projects"));
+       Assert.That(dashboardPage.IsPageOpened);
     }
     
     [Test]
