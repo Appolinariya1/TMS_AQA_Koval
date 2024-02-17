@@ -33,7 +33,7 @@ public class UIElement : IWebElement
 
     public IWebElement FindElement(By by)
     {
-        return _webElement.FindElement(by);
+        return _waitsHelper.WaitChildElement(_webElement, by);
     }
 
     public UIElement FindUIElement(By by)
@@ -44,6 +44,17 @@ public class UIElement : IWebElement
     public ReadOnlyCollection<IWebElement> FindElements(By by)
     {
         return _webElement.FindElements(by);
+    }
+
+    public List<UIElement> FindUIElements(By by)
+    {
+        var result = new List<UIElement>();
+        foreach (var webElement in FindElements(by))
+        {
+            result.Add(new UIElement(_webDriver, webElement));
+        }
+
+        return result;
     }
 
     public void Clear()
@@ -126,7 +137,8 @@ public class UIElement : IWebElement
     {
         get
         {
-            if (_webElement.Text.Equals(""))
+            /*
+            if (_webElement.Text != null || _webElement.Text.Equals(""))
             {
                 if (GetAttribute("value").Equals(""))
                 {
@@ -135,8 +147,9 @@ public class UIElement : IWebElement
 
                 return GetAttribute("value");
             }
+            */
 
-            return Text;
+            return _webElement.Text;
         }
     }
 

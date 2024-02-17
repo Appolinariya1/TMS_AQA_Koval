@@ -2,6 +2,7 @@ using System.Collections.ObjectModel;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
+using Wrappers.Elements;
 
 namespace Wrappers.Helpers;
 
@@ -60,6 +61,11 @@ public class WaitsHelper(IWebDriver driver, TimeSpan timeout)
     public bool WaitForVisibility(IWebElement element)
     {
         return _wait.Until(_ => element.Displayed);
+    }
+
+    public UIElement WaitChildElement(IWebElement webElement, By by)
+    {
+        return new UIElement(driver, _wait.Until(_ => webElement.FindElement(by)));
     }
 
     public IWebElement FluentWaitForElement(By locator)

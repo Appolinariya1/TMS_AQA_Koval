@@ -18,6 +18,7 @@ public class ProjectsTest : BaseTest
         AddProjectPage addProjectPage = new AddProjectPage(Driver);
         addProjectPage.ProjectTypeRadioButton.SelectByIndex(1);
         addProjectPage.ProjectTypeRadioButton.SelectByValue("3");
+        addProjectPage.ProjectTypeRadioButton.SelectByText("Use a single repository for all cases (recommended)");
     }
 
     [Test]
