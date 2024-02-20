@@ -1,8 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectSimple", "PageObjectSimple\PageObjectSimple.csproj", "{85865DC7-C964-4479-BFB9-B33905AF9496}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadableComponent", "LoadableComponent\LoadableComponent.csproj", "{85865DC7-C964-4479-BFB9-B33905AF9496}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectSteps", "PageObjectSteps\PageObjectSteps.csproj", "{B1F3B894-48A9-45A5-AEC8-924C960622E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfInvocations", "ChainOfInvocations\ChainOfInvocations.csproj", "{B1F3B894-48A9-45A5-AEC8-924C960622E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueOfObjects", "ValueOfObjects\ValueOfObjects.csproj", "{90A483D1-F0D1-46B4-8B98-9FF3E4614D89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +20,9 @@ Global
 		{B1F3B894-48A9-45A5-AEC8-924C960622E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1F3B894-48A9-45A5-AEC8-924C960622E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1F3B894-48A9-45A5-AEC8-924C960622E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90A483D1-F0D1-46B4-8B98-9FF3E4614D89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A483D1-F0D1-46B4-8B98-9FF3E4614D89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A483D1-F0D1-46B4-8B98-9FF3E4614D89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A483D1-F0D1-46B4-8B98-9FF3E4614D89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
