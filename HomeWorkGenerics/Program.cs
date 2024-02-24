@@ -22,7 +22,7 @@ Console.WriteLine("Массив с типом int");
     intArray.RemoveAt(1);
     intArray.Print();
 
-    int element = intArray.At(3);
+    int element = intArray.GetAt(3);
     Console.WriteLine($"Элемент по заданному индексу = {element}");
 
     int arraylength = intArray.GetLength();
@@ -39,7 +39,7 @@ Console.WriteLine("\nМассив с типом string");
     strArray.RemoveAt(1);
     strArray.Print();
 
-    string element1 = strArray.At(0);
+    string element1 = strArray.GetAt(0);
     Console.WriteLine($"Элемент по заданному индексу = {element1}");
 
     int arraylength1 = strArray.GetLength();

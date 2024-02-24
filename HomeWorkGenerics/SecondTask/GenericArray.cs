@@ -44,7 +44,7 @@ public class GenericArray<T>
         _array = result;
     }
 
-    public T At(int index)
+    public T GetAt(int index)
     {
         if (index < 0 || index >= GetLength())
         {
