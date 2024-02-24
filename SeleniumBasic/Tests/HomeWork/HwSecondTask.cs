@@ -53,15 +53,15 @@ public class HwSecondTask : BaseTest
         IWebElement calcButton = Driver.FindElement(By.Id("btn_calculate"));
         calcButton.Click();
         Thread.Sleep(3000);
-
+        
         Assert.Multiple(() =>
         {
             IWebElement laminateCountResult =
                 Driver.FindElement(By.CssSelector(".calc-result"));
 
-            Assert.That(laminateCountResult.Text.Replace("\r", ""),
+            Assert.That(new Regex(@"\r|\n").Replace(laminateCountResult.Text, ""),
                 Is.EqualTo(
-                    "Требуемое количество плашек ламината: 49\nКоличество упаковок ламината: 3\nСтоимость ламината: 0 руб\nВес ламината: 0 кг"));
+                    "Требуемое количество плашек ламината: 49Количество упаковок ламината: 3Стоимость ламината: 0 рубВес ламината: 0 кг"));
 
             IWebElement areaRoomResult = Driver.FindElement(By.Id("area_room"));
             Assert.That(areaRoomResult.Text, Is.EqualTo("Площадь комнаты: 15 м2"));
