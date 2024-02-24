@@ -8,15 +8,9 @@ public static class Calculator
         return result;
     }
 
-    //если под проверкой на double.NaN вы подразумевали не это - то я не знаю, что делать :((
     public static double Div(double a, double b)
     {
         double result = a / b;
-        if (double.IsNaN(result) || double.IsInfinity(result))
-        {
-            throw new DivideByZeroException();
-        }
-
         return result;
     }
 }

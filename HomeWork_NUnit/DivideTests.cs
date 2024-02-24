@@ -15,7 +15,6 @@ public class DivideTests
         Console.WriteLine("Настройка перед каждым тестом");
     }
 
-    [TestCase(0.0, 0.0)]
     [TestCase(5.5, 0.0)]
     [Order(0)]
     [Description("Проверка деления на ноль для чисел double")]
@@ -23,37 +22,31 @@ public class DivideTests
     [Category("Negative")]
     public void CalcDivideByZeroDoubleTest(double x, double y)
     {
-        try
-        {
-            Calculator.Div(x, y);
-            Assert.Fail();
-        }
-        catch (DivideByZeroException e)
-        {
-            Assert.Pass();
-        }
+        Assert.That(double.IsInfinity(Calculator.Div(x, y)));
+    }
+
+    [TestCase(0.0, 0.0)]
+    [Order(1)]
+    [Description("Проверка деления нуля на ноль для чисел double")]
+    [Author("Appolinariya", "polina@gmail.com")]
+    [Category("Negative")]
+    public void CalcDivideZeroByZeroDoubleTest(double x, double y)
+    {
+        Assert.That(double.IsNaN(Calculator.Div(x, y)));
     }
 
     [TestCase(25, 0)]
-    [Order(1)]
+    [Order(2)]
     [Description("Проверка деления на ноль для целых чисел")]
     [Author("Appolinariya", "polina@gmail.com")]
     [Category("Negative")]
     public void CalcDivideByZeroIntTest(int x, int y)
     {
-        try
-        {
-            Calculator.Div(x, y);
-            Assert.Fail();
-        }
-        catch (DivideByZeroException e)
-        {
-            Assert.Pass();
-        }
+        Assert.Throws<DivideByZeroException>(() => Calculator.Div(x, y));
     }
 
     [TestCase(25, 5, ExpectedResult = 5)]
-    [Order(2)]
+    [Order(3)]
     [Description("Проверка деления целых чисел")]
     [Author("Appolinariya", "polina@gmail.com")]
     [Category("Positive")]
@@ -63,7 +56,7 @@ public class DivideTests
     }
 
     [TestCaseSource(typeof(DivideTestData), nameof(DivideTestData.DivideCasesInt))]
-    [Order(3)]
+    [Order(4)]
     [Description("Проверка деления целых чисел на основе внешних данных")]
     [Author("Appolinariya", "polina@gmail.com")]
     [Category("Positive")]
@@ -73,7 +66,7 @@ public class DivideTests
     }
 
     [TestCaseSource(typeof(DivideTestData), nameof(DivideTestData.DivideCasesDouble))]
-    [Order(4)]
+    [Order(5)]
     [Description("Проверка деления чисел с плавающей запятой на основе внешних данных")]
     [Author("Appolinariya", "polina@gmail.com")]
     [Category("Positive")]
@@ -83,7 +76,7 @@ public class DivideTests
     }
 
     [Test]
-    [Order(5)]
+    [Order(6)]
     [Description("Множественная проверка деления чисел на основе рандомных данных")]
     [Author("Appolinariya", "polina@gmail.com")]
     [Category("Positive")]
@@ -96,7 +89,7 @@ public class DivideTests
 
     [TestCaseSource(typeof(DivideTestData), nameof(DivideTestData.DivideCasesIntIncorrectData))]
     [Ignore("Избыточная проверка")] //если убрать игнор, пасс сработает на 1 наборе ТД из 3
-    [Order(6)]
+    [Order(7)]
     [Description("Игнорируем этот ТК. Проверка деления чисел с попыткой получить определенный результат")]
     [Author("Appolinariya", "polina@gmail.com")]
     [Retry(5)]
@@ -112,7 +105,7 @@ public class DivideTests
     //для одинаковых значений нет смысла использовать combinatorial, но иначе часть тестов упадет
     //а в дз написано использовать все атрибуты :)
     [Test, Combinatorial]
-    [Order(7)]
+    [Order(8)]
     [Description("Множественная проверка деления чисел на основе комбинированных данных")]
     [Author("Appolinariya", "polina@gmail.com")]
     [Category("Positive")]
@@ -125,7 +118,7 @@ public class DivideTests
     }
 
     [Test, Pairwise]
-    [Order(8)]
+    [Order(9)]
     [Description("Попарная проверка деления чисел")]
     [Author("Appolinariya", "polina@gmail.com")]
     [Category("Positive")]
