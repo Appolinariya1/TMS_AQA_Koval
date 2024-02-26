@@ -1,4 +1,4 @@
-namespace SeleniumBasic.Helpers.Configuration;
+namespace SauceDemo.Helpers.Configuration;
 
 public class AppSettings
 {

@@ -1,11 +1,10 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Firefox;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 using LogLevel = OpenQA.Selenium.LogLevel;
 
-namespace HW_Selenium_Locators.Core;
+namespace SauceDemo.Core;
 
 public class DriverFactory
 {

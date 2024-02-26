@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locators", "Locators\Locators.csproj", "{85865DC7-C964-4479-BFB9-B33905AF9496}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW Selenium Locators", "HW Selenium Locators\HW Selenium Locators.csproj", "{D49A9E31-3FB8-49B3-9A46-138A4F5F5DD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SauceDemo", "SauceDemo\SauceDemo.csproj", "{D49A9E31-3FB8-49B3-9A46-138A4F5F5DD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

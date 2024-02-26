@@ -1,7 +1,7 @@
-using HW_Selenium_Locators.Core;
 using OpenQA.Selenium;
+using SauceDemo.Core;
 
-namespace HW_Selenium_Locators.Tests;
+namespace SauceDemo.Tests;
 
 [Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]

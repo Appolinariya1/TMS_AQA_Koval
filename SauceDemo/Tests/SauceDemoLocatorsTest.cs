@@ -1,7 +1,7 @@
 using OpenQA.Selenium;
-using SeleniumBasic.Helpers.Configuration;
+using SauceDemo.Helpers.Configuration;
 
-namespace HW_Selenium_Locators.Tests;
+namespace SauceDemo.Tests;
 
 public class SauceDemoLocatorsTest : BaseTest
 {
