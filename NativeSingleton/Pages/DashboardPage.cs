@@ -8,7 +8,11 @@ namespace NativeSingleton.Pages
         
         // Описание элементов
         private static readonly By SidebarProjectsAddButtonBy = By.Id("sidebar-projects-add");
-        
+
+        public DashboardPage() : this(false)
+        {
+        }
+
         protected override bool EvaluateLoadedStatus()
         {
             try

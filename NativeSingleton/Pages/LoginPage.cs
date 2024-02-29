@@ -13,6 +13,10 @@ namespace NativeSingleton.Pages
         private static readonly By LoginInButtonBy = By.Id("button_primary");
         private static readonly By ErrorLabelBy = By.CssSelector("[data-testid='loginErrorText']");
 
+        public LoginPage() : this(false)
+        {
+        }
+        
         // Инициализация класса
         protected override string GetEndpoint()
         {
