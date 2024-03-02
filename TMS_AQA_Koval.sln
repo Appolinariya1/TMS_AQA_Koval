@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLogExample", "NLogExample\NLogExample.csproj", "{90A483D1-F0D1-46B4-8B98-9FF3E4614D89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreProject", "CoreProject\CoreProject.csproj", "{90A483D1-F0D1-46B4-8B98-9FF3E4614D89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowTestProject", "SpecFlowTestProject\SpecFlowTestProject.csproj", "{4BCB72FA-3443-48A2-BEC3-65DF396A899D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{90A483D1-F0D1-46B4-8B98-9FF3E4614D89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90A483D1-F0D1-46B4-8B98-9FF3E4614D89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90A483D1-F0D1-46B4-8B98-9FF3E4614D89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BCB72FA-3443-48A2-BEC3-65DF396A899D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BCB72FA-3443-48A2-BEC3-65DF396A899D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BCB72FA-3443-48A2-BEC3-65DF396A899D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BCB72FA-3443-48A2-BEC3-65DF396A899D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
