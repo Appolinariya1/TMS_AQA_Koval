@@ -97,7 +97,7 @@ namespace SpecFlowTestProject.Features
         testRunner.And("страница логина открыта", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 6
-        testRunner.When("user \"atrostyanko@gmail.com\" with password \"Americana#1978\" loggen in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.When("user \"atrostyanko@gmail.com\" with password \"Americana#1978\" logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 7
         testRunner.Then("the add project button is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -114,17 +114,26 @@ namespace SpecFlowTestProject.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Таблицы")]
-        [NUnit.Framework.TestCaseAttribute("atrostyanko@gmail.com", "Americana#1978", "Alex Tros", null)]
-        [NUnit.Framework.TestCaseAttribute("atrostyanko+1@gmail.com", "Americana#1978", "Alex Tros1", null)]
+        [NUnit.Framework.CategoryAttribute("GUI")]
+        [NUnit.Framework.TestCaseAttribute("atrostyanko@gmail.com", "Americana#1978", "Alex Tros", new string[] {
+                "table"}, Category="table")]
+        [NUnit.Framework.TestCaseAttribute("atrostyanko+1@gmail.com", "Americana#1978", "Alex Tros1", new string[] {
+                "table"}, Category="table")]
         public void Таблицы(string username, string password, string visibleText, string[] exampleTags)
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] @__tags = new string[] {
+                    "GUI"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("username", username);
             argumentsOfScenario.Add("password", password);
             argumentsOfScenario.Add("visibleText", visibleText);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Таблицы", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 11
+#line 12
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -134,17 +143,42 @@ namespace SpecFlowTestProject.Features
             else
             {
                 this.ScenarioStart();
-#line 12
+#line 13
         testRunner.Given("открыт браузер", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 13
+#line 14
         testRunner.And("страница логина открыта", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-#line 14
-        testRunner.When(string.Format("user \"{0}\" with password \"{1}\" loggen in", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
 #line 15
+        testRunner.When(string.Format("user \"{0}\" with password \"{1}\" logged in", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 16
         testRunner.Then(string.Format("username is \"{0}\"", visibleText), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Use big text")]
+        public void UseBigText()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Use big text", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 24
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 25
+        testRunner.Given("a blog post named \"Random\" with Markdown body", "Some Title, Eh?\r\n===============\r\nHere is the first paragraph of my blog post. Lo" +
+                        "rem ipsum dolor sit amet,\r\nconsectetur adipiscing elit.", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             }
             this.ScenarioCleanup();

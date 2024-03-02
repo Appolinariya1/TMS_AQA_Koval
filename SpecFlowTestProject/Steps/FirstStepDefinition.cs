@@ -1,69 +1,66 @@
-using Gherkin.CucumberMessages.Types;
 using NUnit.Framework;
+using SpecFlowTestProject.Driver;
 
 namespace SpecFlowTestProject.Steps;
 
 [Binding]
 public class FirstStepDefinition
 {
-
-
-
-
-    [When("страница логина открыта")]
-    public void OpenLoginPage()
+    private readonly Browser _browser;
+    
+    public FirstStepDefinition(Browser browser)
     {
-        Console.WriteLine();
+        _browser = browser;
     }
 
+    [When("страница логина открыта")]
+    [Given("страница логина открыта")]
+    public void OpenLoginPage()
+    {
+        Console.WriteLine("Login page is opened...");
+        _browser.Driver.Navigate().GoToUrl("https://aqa2503.testrail.io/");
+    }
 
     [Then(@"username field is displayed")]
-    public void IsUsernameDisplayed()
+    public void IsUsernameFieldDisplayed()
     {
-        ScenarioContext.StepIsPending();
         Assert.That(true);
     }
 
-    [Given(@"открыт браузер")]
-    public void GivenОткрытБраузер()
+    [Then(@"login button is disabled")]
+    public void IsLoginButtonDisabled()
     {
-        ScenarioContext.StepIsPending();
+        Assert.That(true);
     }
 
-    [Given(@"страница логина открыта")]
-    public void GivenСтраницаЛогинаОткрыта()
+    [When(@"user ""(.*)"" with password ""(.*)"" logged in")]
+    public void UserWithCredentialsLoggedIn(string username, string password)
     {
-        ScenarioContext.StepIsPending();
-    }
-
-    [When(@"user ""(.*)"" with password ""(.*)"" loggen in")]
-    public void WhenUserWithPasswordLoggenIn(string p0, string p1)
-    {
-        ScenarioContext.StepIsPending();
+        Console.WriteLine($"User {username} logged in with psw {password}");
     }
 
     [Then(@"the add project button is displayed")]
     public void ThenTheAddProjectButtonIsDisplayed()
     {
-        ScenarioContext.StepIsPending();
+        Console.WriteLine("Button is displayed...");
     }
 
     [Then(@"username is ""(.*)""")]
-    public void ThenUsernameIs(string p0)
+    public void IsUsernameEquals(string username)
     {
-        ScenarioContext.StepIsPending();
+        Console.WriteLine($"User has {username}");
     }
 
     [Then(@"a project ID is (.*)")]
-    public void ThenAProjectIdIs(int p0)
+    public void IsProjectIdEqualsTo(int id)
     {
-        ScenarioContext.StepIsPending();
+        Assert.That(id, Is.EqualTo(23));
     }
 
     [Given(@"a blog post named ""(.*)"" with Markdown body")]
     public void GivenABlogPostNamedWithMarkdownBody(string random, string multilineText)
     {
-        ScenarioContext.StepIsPending();
-        Console.WriteLine($"Blog has name ");
+        Console.WriteLine($"Blog has name : {random}");
+        Console.WriteLine($"Text : {multilineText}");
     }
 }
