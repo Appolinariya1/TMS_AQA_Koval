@@ -1,4 +1,4 @@
-namespace NLogExample.Tests;
+namespace CoreProject.Tests;
 
 public class LoginTest : BaseTest
 {

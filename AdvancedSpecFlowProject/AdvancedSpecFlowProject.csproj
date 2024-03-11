@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <LangVersion>12</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Using Include="TechTalk.SpecFlow"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Allure.SpecFlow" Version="2.11.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+        <PackageReference Include="NUnit" Version="3.14.0" />
+        <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
+        <PackageReference Include="Selenium.Support" Version="4.18.1" />
+        <PackageReference Include="Selenium.WebDriver" Version="4.18.1" />
+        <PackageReference Include="SpecFlow" Version="3.9.74" />
+        <PackageReference Include="SpecFlow.Internal.Json" Version="1.0.8" />
+        <PackageReference Include="SpecFlow.NUnit" Version="3.9.74" />
+        <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
+
+        <PackageReference Include="FluentAssertions" Version="6.12.0" />
+
+        <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.74" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CoreProject\CoreProject.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="appsettings.json" />
+      <Content Include="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="specflow.json" />
+      <Content Include="specflow.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Folder Include="Steps\GUI\" />
+    </ItemGroup>
+
+</Project>

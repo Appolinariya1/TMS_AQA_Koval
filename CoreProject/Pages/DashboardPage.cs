@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace NLogExample.Pages
+namespace CoreProject.Pages
 {
     public class DashboardPage(IWebDriver? driver, bool openByURL = false) : BasePage(driver, openByURL)
     {

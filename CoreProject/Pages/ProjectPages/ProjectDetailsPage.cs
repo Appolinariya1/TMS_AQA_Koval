@@ -1,14 +1,13 @@
 using OpenQA.Selenium;
 
-namespace NLogExample.Pages.ProjectPages;
+namespace CoreProject.Pages.ProjectPages;
 
 public class ProjectDetailsPage(IWebDriver? driver, bool openByURL = false) : BasePage(driver, openByURL)
 {
     private const string END_POINT = "";
-    
+
     // Описание элементов
     private static readonly By OverviewTabBy = By.Id("navigation-projects");
-
     
     protected override bool EvaluateLoadedStatus()
     {
@@ -19,6 +18,6 @@ public class ProjectDetailsPage(IWebDriver? driver, bool openByURL = false) : Ba
     {
         return END_POINT;
     }
-    
+
     public IWebElement OverviewTab => WaitsHelper.WaitForExists(OverviewTabBy);
 }

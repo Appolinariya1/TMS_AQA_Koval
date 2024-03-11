@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace NLogExample.Elements;
+namespace CoreProject.Elements;
 
 public class TableCell
 {

@@ -1,6 +1,6 @@
-using NLogExample.Models;
+using CoreProject.Models;
 
-namespace NLogExample.Tests;
+namespace CoreProject.Tests;
 
 public class ProjectTest : BaseTest
 {

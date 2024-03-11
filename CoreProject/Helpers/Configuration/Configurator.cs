@@ -1,7 +1,7 @@
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
 
-namespace NLogExample.Helpers.Configuration
+namespace CoreProject.Helpers.Configuration
 {
     public static class Configurator
     {

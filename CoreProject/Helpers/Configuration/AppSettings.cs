@@ -1,4 +1,4 @@
-namespace NLogExample.Helpers.Configuration;
+namespace CoreProject.Helpers.Configuration;
 
 public class AppSettings
 {

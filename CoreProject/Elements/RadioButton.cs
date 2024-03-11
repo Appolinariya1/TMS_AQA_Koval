@@ -1,8 +1,8 @@
-using NLogExample.Helpers;
-using NLogExample.Helpers.Configuration;
+using CoreProject.Helpers;
+using CoreProject.Helpers.Configuration;
 using OpenQA.Selenium;
 
-namespace NLogExample.Elements;
+namespace CoreProject.Elements;
 
 public class RadioButton
 {

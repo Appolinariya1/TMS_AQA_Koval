@@ -1,10 +1,10 @@
-using NLogExample.Core;
-using NLogExample.Helpers.Configuration;
-using NLogExample.Models;
-using NLogExample.Steps;
+using CoreProject.Core;
+using CoreProject.Helpers.Configuration;
+using CoreProject.Models;
+using CoreProject.Steps;
 using OpenQA.Selenium;
 
-namespace NLogExample.Tests;
+namespace CoreProject.Tests;
 
 [Parallelizable(scope: ParallelScope.All)]
 [FixtureLifeCycle(LifeCycle.InstancePerTestCase)]

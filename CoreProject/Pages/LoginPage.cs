@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace NLogExample.Pages
+namespace CoreProject.Pages
 {
     public class LoginPage(IWebDriver? driver, bool openByURL = false) : BasePage(driver, openByURL)
     {
@@ -26,8 +26,20 @@ namespace NLogExample.Pages
 
         // Методы
         public IWebElement EmailInput => WaitsHelper.WaitForExists(EmailInputBy);
+
+        public void SetEmail(string value)
+        {
+            EmailInput.SendKeys(value);
+        }
+
         public IWebElement ErrorLabel => WaitsHelper.WaitForExists(ErrorLabelBy);
         public IWebElement PswInput => WaitsHelper.WaitForExists(PswInputBy);
+
+        public void SetPassword(string value)
+        {
+            PswInput.SendKeys(value);
+        }
+
         public IWebElement RememberMeCheckbox => WaitsHelper.WaitForExists(RememberMeCheckboxBy);
         public IWebElement LoginInButton => WaitsHelper.WaitForExists(LoginInButtonBy);
     }

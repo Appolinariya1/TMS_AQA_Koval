@@ -1,9 +1,9 @@
-using NLogExample.Models;
-using NLogExample.Pages;
-using NLogExample.Pages.ProjectPages;
+using CoreProject.Models;
+using CoreProject.Pages;
+using CoreProject.Pages.ProjectPages;
 using OpenQA.Selenium;
 
-namespace NLogExample.Steps;
+namespace CoreProject.Steps;
 
 public class NavigationSteps : BaseStep
 {
@@ -11,7 +11,7 @@ public class NavigationSteps : BaseStep
     
     public LoginPage NavigateToLoginPage()
     {
-        return new LoginPage(Driver);
+        return new LoginPage(Driver, true);
     }
 
     public DashboardPage NavigateToDashboardPage()

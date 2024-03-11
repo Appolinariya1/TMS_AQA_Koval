@@ -1,9 +1,9 @@
-using NLogExample.Helpers;
-using NLogExample.Helpers.Configuration;
+using CoreProject.Helpers;
+using CoreProject.Helpers.Configuration;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace NLogExample.Pages;
+namespace CoreProject.Pages;
 
 public abstract class BasePage : LoadableComponent<BasePage>
 {

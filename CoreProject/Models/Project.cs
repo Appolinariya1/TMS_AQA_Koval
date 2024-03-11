@@ -1,4 +1,4 @@
-namespace NLogExample.Models;
+namespace CoreProject.Models;
 
 public class Project
 {
