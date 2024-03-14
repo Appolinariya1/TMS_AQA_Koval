@@ -9,6 +9,7 @@ public class ProjectTest : BaseTest
     {
         _navigationSteps.SuccessfulLogin(Admin);
 
+        /*
         Project expectedProject = new Project()
         {
             ProjectName = "WP Test 01",
@@ -16,8 +17,9 @@ public class ProjectTest : BaseTest
             IsShowAnnouncement = false,
             ProjectType = 1
         };
+        */
 
-        Assert.That(_projectSteps.AddProject(expectedProject).SuccessMessage.Text.Trim(),
+        Assert.That(_projectSteps.AddProject(project).SuccessMessage.Text.Trim(),
             Is.EqualTo("Successfully added the new project."));
     }
 }

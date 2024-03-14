@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using ValueOfObjects.Core;
+using ValueOfObjects.Helpers;
 using ValueOfObjects.Helpers.Configuration;
 using ValueOfObjects.Models;
 using ValueOfObjects.Steps;
@@ -16,7 +17,21 @@ public class BaseTest
     protected ProjectSteps _projectSteps;
 
     protected User Admin { get; private set; }
-
+    protected Project project;
+    
+    [OneTimeSetUp]
+    public void OneTimeSetup()
+    {
+        if (Configurator.Language.ToLower().Equals("en"))
+        {
+            project = JsonHelper.ProjectFromJson(@"Resources/project_en.json");            
+        }
+        else
+        {
+            project = JsonHelper.ProjectFromJson(@"Resources/project_rus.json");            
+        }
+    }
+    
     [SetUp]
     public void Setup()
     {
