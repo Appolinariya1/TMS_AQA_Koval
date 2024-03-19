@@ -1,3 +1,4 @@
+using System.Reflection;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 
@@ -57,5 +58,30 @@ public class HomeWorkTests : BaseTest
             Assert.That(WaitsHelper.WaitForVisibilityLocatedBy(By.Id("message")).Text, Is.EqualTo("It's enabled!"));
             Assert.That(input.Enabled);
         });
+    }
+
+    [Test]
+    [Description("File Upload")]
+    public void FileUploadTest()
+    {
+        //перейти на страницу Dynamic Controls со стартовой страницы
+        WaitsHelper.WaitForVisibilityLocatedBy(By.LinkText("File Upload")).Click();
+
+        var fileUploadElement = WaitsHelper.WaitForExists(By.Id("file-upload"));
+
+        // Получить путь к исполняемому файлу (exe)
+        string assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
+        // Сконструировать путь к файлу внутри проекта
+        string filePath = Path.Combine(assemblyPath, "Resources", "mycat.jpg");
+
+        fileUploadElement.SendKeys(filePath);
+
+        //Загрузить файл
+        WaitsHelper.WaitForExists(By.Id("file-submit")).Submit();
+
+        //Проверить, что имя файла на странице совпадает с именем загруженного файла
+
+        Assert.That(WaitsHelper.WaitForExists(By.Id("uploaded-files")).Text, Is.EqualTo("mycat.jpg"));
     }
 }
