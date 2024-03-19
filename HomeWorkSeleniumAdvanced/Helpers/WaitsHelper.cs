@@ -13,22 +13,22 @@ public class WaitsHelper(IWebDriver driver, TimeSpan timeout)
     {
         return _wait.Until(ExpectedConditions.ElementIsVisible(locator)); //дождаться + условие, что ждем
     }
-    
+
     public ReadOnlyCollection<IWebElement> WaitForAllVisibleElementsLocatedBy(By locator)
     {
         return _wait.Until(ExpectedConditions.VisibilityOfAllElementsLocatedBy(locator));
     }
-    
+
     public IWebElement WaitForExists(By locator)
     {
-        return _wait.Until(ExpectedConditions.ElementExists(locator)); 
+        return _wait.Until(ExpectedConditions.ElementExists(locator));
     }
 
     public bool WaitForElementInvisible(By locator)
     {
-       return _wait.Until(ExpectedConditions.InvisibilityOfElementLocated(locator));
+        return _wait.Until(ExpectedConditions.InvisibilityOfElementLocated(locator));
     }
-    
+
     public bool WaitForElementInvisible(IWebElement webElement)
     {
         try
@@ -51,12 +51,12 @@ public class WaitsHelper(IWebDriver driver, TimeSpan timeout)
             throw new WebDriverTimeoutException("Элемент не стал невидимым в течение заданного времени");
         }
     }
-    
+
     public bool WaitForVisibility(IWebElement element)
     {
         return _wait.Until(_ => element.Displayed);
     }
-    
+
     public IWebElement FluentWaitForElement(By locator)
     {
         //Инициализация и параметризация FluentWait
@@ -64,10 +64,15 @@ public class WaitsHelper(IWebDriver driver, TimeSpan timeout)
         {
             PollingInterval = TimeSpan.FromMilliseconds(50),
         };
-        
+
         fluentWait.IgnoreExceptionTypes(typeof(NoSuchElementException));
 
         //Использование
         return fluentWait.Until(_ => driver.FindElement(locator));
+    }
+
+    public bool WaitForFileExists(string path)
+    {
+        return _wait.Until(_ => File.Exists(path));
     }
 }

@@ -1,4 +1,5 @@
 using System.Reflection;
+using HomeWorkSeleniumAdvanced.Core;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 
@@ -64,7 +65,7 @@ public class HomeWorkTests : BaseTest
     [Description("File Upload")]
     public void FileUploadTest()
     {
-        //перейти на страницу Dynamic Controls со стартовой страницы
+        //перейти на страницу File Upload со стартовой страницы
         WaitsHelper.WaitForVisibilityLocatedBy(By.LinkText("File Upload")).Click();
 
         var fileUploadElement = WaitsHelper.WaitForExists(By.Id("file-upload"));
@@ -83,5 +84,22 @@ public class HomeWorkTests : BaseTest
         //Проверить, что имя файла на странице совпадает с именем загруженного файла
 
         Assert.That(WaitsHelper.WaitForExists(By.Id("uploaded-files")).Text, Is.EqualTo("mycat.jpg"));
+    }
+
+    [Test]
+    [Description("File Download")]
+    public void FileDownloadTest()
+    {
+        //перейти на страницу File Download со стартовой страницы
+        WaitsHelper.WaitForVisibilityLocatedBy(By.LinkText("File Download")).Click();
+
+        string fileName = "test.txt";
+        string filePath = Path.Combine(DriverFactory.DownloadPath, fileName);
+
+        // Нажать на кнопку загрузки файла
+        WaitsHelper.WaitForVisibilityLocatedBy(By.LinkText(fileName)).Click();
+
+        // проверить наличие файла в файловой системе
+        Assert.That(WaitsHelper.WaitForFileExists(filePath));
     }
 }
