@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueOfObjects", "ValueOfObjects\ValueOfObjects.csproj", "{90A483D1-F0D1-46B4-8B98-9FF3E4614D89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharpApi", "RestSharpApi\RestSharpApi.csproj", "{90A483D1-F0D1-46B4-8B98-9FF3E4614D89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
