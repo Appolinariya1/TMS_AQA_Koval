@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharpApi", "RestSharpApi\RestSharpApi.csproj", "{90A483D1-F0D1-46B4-8B98-9FF3E4614D89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRailComplexApi", "TestRailComplexApi\TestRailComplexApi.csproj", "{F590F5B9-84E5-40C4-AE76-9CE62C8C5B19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{90A483D1-F0D1-46B4-8B98-9FF3E4614D89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90A483D1-F0D1-46B4-8B98-9FF3E4614D89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90A483D1-F0D1-46B4-8B98-9FF3E4614D89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F590F5B9-84E5-40C4-AE76-9CE62C8C5B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F590F5B9-84E5-40C4-AE76-9CE62C8C5B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F590F5B9-84E5-40C4-AE76-9CE62C8C5B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F590F5B9-84E5-40C4-AE76-9CE62C8C5B19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
