@@ -1,17 +1,14 @@
 {
-  "name": "Alex Tros",
-  "id": 1,
-  "email": "atrostyanko@gmail.com",
-  "is_active": true,
-  "role_id": 1,
-  "is_admin": true,
-  "email_notifications": true,
-  "mfa_required": 0,
-  "sso_enabled": false,
-  "role": "Lead",
-  "assigned_projects": [
-    1,
-    8
-  ],
-  "group_ids": []
+  "id": 17,
+  "name": "WP Project 2",
+  "announcement": "Test project description",
+  "show_announcement": true,
+  "is_completed": false,
+  "completed_on": null,
+  "suite_mode": 3,
+  "default_role_id": null,
+  "case_statuses_enabled": false,
+  "url": "https:\/\/aqa2504.testrail.io\/index.php?\/projects\/overview\/17",
+  "users": [],
+  "groups": []
 }
