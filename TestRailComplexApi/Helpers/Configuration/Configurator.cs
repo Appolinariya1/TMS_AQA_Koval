@@ -1,5 +1,7 @@
 using System.Reflection;
 using Microsoft.Extensions.Configuration;
+using TestRailComplexApi.Models;
+using TestRailComplexApi.Models.Enums;
 
 namespace TestRailComplexApi.Helpers.Configuration
 {
@@ -38,13 +40,41 @@ namespace TestRailComplexApi.Helpers.Configuration
                 var child = Configuration.GetSection("AppSettings");
 
                 appSettings.URL = child["URL"];
-                appSettings.Username = child["Username"];
-                appSettings.Password = child["Password"];
+                appSettings.URI = child["URI"];
 
                 return appSettings;
             }
         }
 
+        public static List<User?> Users
+        {
+            get
+            {
+                List<User?> users = new List<User?>();
+                var child = Configuration.GetSection("Users");
+                foreach (var section in child.GetChildren())
+                {
+                    var user = new User()
+                    {
+                        Username = section["Username"],
+                        Password = section["Password"]
+                    };
+
+                    user.UserType = section["UserType"].ToLower() switch
+                    {
+                        "admin" => UserType.Admin,
+                        "standart" => UserType.Standard,
+                        _ => user.UserType
+                    };
+
+                    users.Add(user);
+                }
+
+                return users;
+            }
+        }
+
+        public static User? Admin => Users.Find(x => x?.UserType == UserType.Admin);
         public static string? BrowserType => Configuration[nameof(BrowserType)];
         public static double WaitsTimeout => Double.Parse(Configuration[nameof(WaitsTimeout)]);
         public static string? Language => Configuration[nameof(Language)];

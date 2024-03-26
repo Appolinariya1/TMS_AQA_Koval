@@ -31,14 +31,14 @@
       <Content Include="appsettings.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
+      <None Remove="NLog.config" />
+      <Content Include="NLog.config">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Clients\" />
       <Folder Include="Fakers\" />
-      <Folder Include="Models\" />
-      <Folder Include="Services\" />
-      <Folder Include="Tests\" />
     </ItemGroup>
 
 </Project>
