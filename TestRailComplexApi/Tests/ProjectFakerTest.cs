@@ -38,7 +38,6 @@ public class ProjectFakerTest : BaseApiTest
     public void DeleteProjectTest()
     {
         Debug.Assert(ProjectService != null, nameof(ProjectService) + " != null");
-        
-        _logger.Info(_project.ToString);
+        _logger.Info(ProjectService.DeleteProject(_project.Id.ToString()));
     }
 }
