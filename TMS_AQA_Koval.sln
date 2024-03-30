@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectSimple", "PageObj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObjectSteps", "PageObjectSteps\PageObjectSteps.csproj", "{B1F3B894-48A9-45A5-AEC8-924C960622E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SauceDemoHW", "SauceDemoHW\SauceDemoHW.csproj", "{A6C304F1-A525-4FA8-BC58-395E6A9198DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{B1F3B894-48A9-45A5-AEC8-924C960622E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1F3B894-48A9-45A5-AEC8-924C960622E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1F3B894-48A9-45A5-AEC8-924C960622E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6C304F1-A525-4FA8-BC58-395E6A9198DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6C304F1-A525-4FA8-BC58-395E6A9198DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6C304F1-A525-4FA8-BC58-395E6A9198DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6C304F1-A525-4FA8-BC58-395E6A9198DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
