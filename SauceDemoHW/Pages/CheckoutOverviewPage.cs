@@ -28,6 +28,8 @@ public class CheckoutOverviewPage : BasePage
     public IWebElement ProductBackpack => WaitsHelper.WaitForExists(ProductBackpackBy);
     public IWebElement SummaryTotalLabel => WaitsHelper.WaitForExists(SummaryTotalLabelBy);
     public IWebElement FinishButton => WaitsHelper.WaitForExists(FinishButtonBy);
+    public bool FinishButtonVisible => WaitsHelper.WaitForVisibility(FinishButton);
+    
 
     public CheckoutCompletePage ClickFinishButton()
     {
