@@ -9,7 +9,7 @@ public abstract class BasePage
     protected IWebDriver Driver { get; private set; }
     protected WaitsHelper WaitsHelper { get; private set; }
 
-    public BasePage(IWebDriver driver, bool openPageByUrl = false)
+    public BasePage(IWebDriver driver, bool openPageByUrl)
     {
         Driver = driver;
         WaitsHelper = new WaitsHelper(Driver, TimeSpan.FromSeconds(Configurator.WaitsTimeout));

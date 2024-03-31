@@ -12,7 +12,7 @@ public class LoginPage : BasePage
     private static readonly By LoginInButtonBy = By.Id("login-button");
     private static readonly By ErrorLabelBy = By.XPath("//h3[@data-test='error']");
 
-    public LoginPage(IWebDriver driver) : base(driver)
+    public LoginPage(IWebDriver driver, bool openPageByUrl = false) : base(driver, openPageByUrl)
     {
     }
 

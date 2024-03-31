@@ -8,11 +8,11 @@ public class CartPage : BasePage
 
     // Описание элементов
     private static readonly By TitleLabelBy = By.ClassName("title");
-    private readonly By ProductLabelBy = By.ClassName("inventory_item_name");
-    private readonly By RemoveButtonBy = By.Id("remove-sauce-labs-backpack");
-    private readonly By ShoppingCartBadgeBy = By.ClassName("shopping_cart_badge");
-    private readonly By CheckoutButtonBy = By.Id("checkout");
-    private readonly By ContinueShoppingButtonBy = By.Id("continue-shopping");
+    private static readonly By ProductLabelBy = By.ClassName("inventory_item_name");
+    private static readonly By RemoveButtonBy = By.Id("remove-sauce-labs-backpack");
+    private static readonly By ShoppingCartBadgeBy = By.ClassName("shopping_cart_badge");
+    private static readonly By CheckoutButtonBy = By.Id("checkout");
+    private static readonly By ContinueShoppingButtonBy = By.Id("continue-shopping");
 
     public CartPage(IWebDriver driver, bool openPageByUrl) : base(driver, openPageByUrl)
     {

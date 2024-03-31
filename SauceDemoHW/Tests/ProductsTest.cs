@@ -1,3 +1,4 @@
+using System.Data.Common;
 using SauceDemoHW.Helpers.Configuration;
 using SauceDemoHW.Pages;
 
@@ -27,6 +28,25 @@ public class ProductsTest : BaseTest
         {
             Assert.That(cartPage.IsPageOpened);
             Assert.That(cartPage.ProductLabel.Text, Is.EqualTo("Sauce Labs Backpack"));
+        });
+    }
+
+    [Test]
+    [Description("Тест на удаление товара из корзины")]
+    public void RemoveFromCartTest()
+    {
+        LoginPage loginPage = new LoginPage(Driver);
+        ProductsPage productsPage =
+            loginPage.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
+
+        productsPage.AddProduct();
+        CartPage cartPage = productsPage.ClickShoppingCartLink();
+        cartPage.ClickRemoveButton();
+
+        Assert.Multiple(() =>
+        {
+            Assert.That(cartPage.IsPageOpened);
+            Assert.That(cartPage.ProductLabelInvisibility, Is.EqualTo(true));
         });
     }
 }
