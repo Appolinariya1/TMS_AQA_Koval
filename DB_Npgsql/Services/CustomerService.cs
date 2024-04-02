@@ -66,15 +66,43 @@ public class CustomerService
         {
             Parameters =
             {
-                new () {Value = customer.Firstname},
-                new () {Value = customer.Lastname}
+                new() { Value = customer.Firstname },
+                new() { Value = customer.Lastname }
             }
         };
-        
+
         return cmd.ExecuteNonQuery();
     }
 
-    public void GetCustomerById(int id)
+    public Customer GetCustomerById(int id)
     {
+        var customer = new Customer();
+
+        //Retrieve all rows
+        var cmd = new NpgsqlCommand("select * from public.customers where id = $1;", _connection)
+        {
+            Parameters =
+            {
+                new() { Value = id }
+            }
+        };
+
+        var reader = cmd.ExecuteReader();
+
+        while (reader.Read())
+        {
+            {
+                customer.Id = reader.GetInt32(0);
+                customer.Firstname = reader.GetString(reader.GetOrdinal("firstname"));
+                customer.Lastname = reader.GetString(reader.GetOrdinal("lastname"));
+                customer.Email = reader.GetString(reader.GetOrdinal("email"));
+                customer.Age = reader.GetInt32(reader.GetOrdinal("age"));
+            }
+            ;
+
+            _logger.Info(customer);
+        }
+
+        return customer;
     }
 }
