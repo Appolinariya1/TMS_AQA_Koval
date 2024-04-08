@@ -1,9 +1,12 @@
+using Allure.NUnit;
 using NLog;
 using TestRailComplexApi.Clients;
 using TestRailComplexApi.Services;
 
 namespace TestRailComplexApi.Tests.API;
 
+[Parallelizable(scope: ParallelScope.Fixtures)]
+[AllureNUnit]
 public class BaseApiTest
 {
     private readonly Logger _logger = LogManager.GetCurrentClassLogger();
@@ -16,5 +19,4 @@ public class BaseApiTest
 
         ProjectService = new ProjectService(restClient);
     }
-    
 }
