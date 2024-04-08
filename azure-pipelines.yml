@@ -31,3 +31,9 @@ steps:
   inputs:
     allureVersion: 2.27.0
     testResultsDir: TestRail/bin/Debug/net8.0/allure-results
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
