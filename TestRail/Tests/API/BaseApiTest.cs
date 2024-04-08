@@ -2,7 +2,7 @@ using NLog;
 using TestRailComplexApi.Clients;
 using TestRailComplexApi.Services;
 
-namespace TestRailComplexApi.Tests;
+namespace TestRailComplexApi.Tests.API;
 
 public class BaseApiTest
 {
