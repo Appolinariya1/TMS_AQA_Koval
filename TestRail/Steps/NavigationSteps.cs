@@ -1,3 +1,4 @@
+using Allure.NUnit.Attributes;
 using OpenQA.Selenium;
 using TestRailComplexApi.Models;
 using TestRailComplexApi.Pages;
@@ -9,26 +10,31 @@ public class NavigationSteps : BaseStep
 {
     public NavigationSteps(IWebDriver driver) : base(driver) { }
     
+    [AllureStep]
     public LoginPage NavigateToLoginPage()
     {
         return new LoginPage(Driver);
     }
-
+    
+    [AllureStep]
     public DashboardPage NavigateToDashboardPage()
     {
         return new DashboardPage(Driver);
     }
     
+    [AllureStep]
     public AddProjectPage NavigateToAddProjectPage()
     {
         return new AddProjectPage(Driver);
     }
     
+    [AllureStep]
     public DashboardPage SuccessfulLogin(User? user)
     {
         return Login<DashboardPage>(user);
     }
 
+    [AllureStep]
     public LoginPage IncorrectLogin(User? user)
     {
         return Login<LoginPage>(user);
