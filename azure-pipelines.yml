@@ -30,4 +30,4 @@ steps:
   displayName: Publish Report
   inputs:
     allureVersion: 2.27.0
-    testResultsDir: allure-results
+    testResultsDir: TestRail/bin/Debug/net8.0/allure-results
