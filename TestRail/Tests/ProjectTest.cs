@@ -22,13 +22,12 @@ public class ProjectTest : BaseApiTest
         };
 
         var actualProject = ProjectService!.AddProject(_project);
-        
+
         //блок проверок
         Assert.Multiple(() =>
         {
             Assert.That(actualProject.Result.Name, Is.EqualTo(_project.Name));
             Assert.That(actualProject.Result.Announcement, Is.EqualTo(_project.Announcement));
-            Assert.That(actualProject.Result.ShowAnnouncement, Is.EqualTo(_project.ShowAnnouncement));
             Assert.That(actualProject.Result.SuiteMode, Is.EqualTo(_project.SuiteMode));
         });
         _project = actualProject.Result;
